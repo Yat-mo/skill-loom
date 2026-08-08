@@ -10,7 +10,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "reports" / "codex-skill-catalog.md"
-README = ROOT / "README.md"
 
 
 def numbered_names(section: str) -> list[str]:
@@ -21,7 +20,6 @@ class CodexSkillCatalogTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.catalog = CATALOG.read_text(encoding="utf-8")
-        cls.readme = README.read_text(encoding="utf-8")
 
     def test_catalog_counts_are_explicit_and_unique(self) -> None:
         public_block, remainder = self.catalog.split(
@@ -42,8 +40,8 @@ class CodexSkillCatalogTest(unittest.TestCase):
         for name in numbered_names(public_block):
             self.assertIn(
                 f"https://github.com/joeseesun/{name}",
-                self.readme,
-                f"README lacks public repository link for {name}",
+                self.catalog,
+                f"catalog lacks public repository link for {name}",
             )
 
     def test_catalog_does_not_publish_local_paths_or_raw_session_files(self) -> None:

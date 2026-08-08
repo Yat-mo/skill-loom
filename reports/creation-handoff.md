@@ -2,9 +2,9 @@
 
 ## Result
 
-- Skill: `qiaomu-meta-skill` 2.9.0, Yat-mo fork
+- Skill: `qiaomu-meta-skill` 2.9.1, Yat-mo fork
 - Job: research, architect, evaluate, package, govern, and safely publish reusable skills through one self-contained workflow
-- Status: progressive project-skill architecture and Codex adapter prepared on a feature branch; public 2.9.0 evidence remains `missing evidence` until the fork release workflow completes
+- Status: public README rewritten for the Yat-mo Fork; behavior remains unchanged from 2.9.0, and public 2.9.1 evidence remains `missing evidence` until the release workflow completes
 
 ## Reference skills studied
 
@@ -64,9 +64,9 @@
 - Built-in prior-art smoke: passed 2/2 queries across skills.sh and SkillsMP, preserving 51 deduplicated candidate families with no missing catalog evidence.
 - Self-contained publisher dry-run against this repository: passed, resolved `joeseesun/qiaomu-meta-skill`, planned no unwanted file changes, and reported default-branch push as forbidden.
 - Independent `--prepare-only` fixture: passed; created MIT LICENSE, product README, three bundled Profile assets and an idempotent profile block, then passed the package validator with zero warnings.
-- Integrated discovery verifier against the upstream published repository previously passed; public discovery and clean installation for Yat-mo Fork 2.9.0 remain `missing evidence` until release.
+- Integrated discovery verifier passed for Yat-mo Fork 2.9.0; public discovery and clean installation for documentation release 2.9.1 remain `missing evidence` until release.
 - Live dual-catalog smoke: passed in strict mode for `skill evaluation`; skills.sh and SkillsMP both completed, producing 9 merged candidate families with source metrics kept separate.
 - Local release readiness: passed with 6 pass, 3 warn, and 0 block. Warnings accurately record the dirty worktree, unavailable clean-install proof before a remote revision exists, and missing provider/human output evidence.
-- PR, merged default-branch, GitHub release, and public clean-install proof for 2.9.0: `missing evidence` until the current release workflow completes.
+- PR, merged default-branch, GitHub release, and public clean-install proof for 2.9.1: `missing evidence` until the current release workflow completes.
 - Provider-backed head-to-head output evaluation: `missing evidence`.
 - Human blind comparison of handoff persuasiveness: `missing evidence`.
