@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export a compact Skill IR document from a Qiaomu skill package."""
+"""Export a compact Skill IR document from an agent skill package."""
 
 from __future__ import annotations
 
@@ -16,7 +16,7 @@ except Exception:  # pragma: no cover
     yaml = None
 
 
-SCHEMA_VERSION = "2.0.0-qiaomu-lite"
+SCHEMA_VERSION = "3.0.0-skill-loom"
 
 
 def read_text(path: Path) -> str:
@@ -138,11 +138,13 @@ def build_ir(root: Path) -> dict[str, Any]:
         "intent": {
             "description": frontmatter.get("description", ""),
             "job_to_be_done": intent.get("job_to_be_done") or frontmatter.get("description", ""),
-            "target_users": intent.get("target_users", ["Qiaomu operator"]),
+            "target_users": intent.get("target_users", ["agent skill author"]),
             "inputs": intent.get("inputs", []),
             "outputs": intent.get("outputs", []),
             "exclusions": intent.get("exclusions", []),
-            "qiaomu_defaults": manifest.get("qiaomu_defaults", {}),
+            "skill_loom_defaults": manifest.get(
+                "skill_loom_defaults", manifest.get("qiaomu_defaults", {})
+            ),
         },
         "triggers": {
             "should_trigger": trigger_samples(root, "should_trigger"),
@@ -181,7 +183,7 @@ def build_ir(root: Path) -> dict[str, Any]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Export compact Skill IR for a Qiaomu skill.")
+    parser = argparse.ArgumentParser(description="Export compact Skill IR for an agent skill.")
     parser.add_argument("skill_dir", nargs="?", default=".", help="Skill directory.")
     parser.add_argument("--output", "-o", help="Write JSON to this path.")
     args = parser.parse_args()

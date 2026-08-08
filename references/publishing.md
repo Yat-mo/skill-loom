@@ -1,6 +1,6 @@
 # Self-Contained Skill Publishing
 
-`qiaomu-meta-skill` owns the complete public release path. Do not require or invoke a separate publisher skill after this package is selected.
+`skill-loom` owns the complete public release path. Do not require or invoke a separate publisher skill after this package is selected.
 
 ## Capability contract
 
