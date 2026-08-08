@@ -1,8 +1,8 @@
-# Skill Loom v3.0.0 Creation Handoff
+# Skill Loom v3.0.1 Creation Handoff
 
 ## Result
 
-- Skill: `skill-loom` 3.0.0, owned by Yat-mo
+- Skill: `skill-loom` 3.0.1, owned by Yat-mo
 - Job: turn recurring workflows, rules and source materials into researched, trigger-aware, evaluated and safely publishable Agent Skills
 - Identity change: repository, public brand, Skill ID, adapters and self-validation moved from `qiaomu-meta-skill` to `skill-loom`
 - Migration: the old name remains only as a legacy activation alias, upstream attribution, historical evidence or Qiaomu-owner profile compatibility
@@ -32,7 +32,8 @@
 
 - `design advantage`: repository, Skill ID, adapters, installer command and validator now use one canonical identity.
 - `design advantage`: README leads with user outcome, installation, concrete triggers and output before architecture detail.
-- `validated advantage`: package, unit, trigger, release and clean-install results are recorded by the v3.0.0 release workflow.
+- `design advantage`: the README now explains Agent Skill and Skill Loom in plain language before showing installation, files or validation terms.
+- `validated advantage`: package, unit, trigger, release and clean-install results are recorded by the v3.0.1 release workflow.
 - `hypothesis`: the shorter brand and product-first README should improve recall and adoption; conversion or user-comprehension evidence remains `missing evidence`.
 
 ## Verification boundary

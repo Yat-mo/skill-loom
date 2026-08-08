@@ -97,6 +97,10 @@ class PublishSkillTest(unittest.TestCase):
         with self.assertRaises(PUBLISH.PublishError):
             PUBLISH.assert_feature_branch("feature/publish-demo", "main")
 
+    def test_traditional_chinese_readme_examples_heading_is_valid(self) -> None:
+        failures = PUBLISH.check_readme(ROOT, "", require_profile=False)
+        self.assertNotIn("README missing natural-language examples", failures)
+
     def test_failed_or_pending_checks_block_merge(self) -> None:
         ok, blockers = PUBLISH.pr_is_mergeable(
             {

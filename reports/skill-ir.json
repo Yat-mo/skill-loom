@@ -3,7 +3,7 @@
   "generated_at": "2026-08-08",
   "package": {
     "name": "skill-loom",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "owner": "Yat-mo",
     "maturity_tier": "governed",
     "lifecycle_stage": "library",
