@@ -1,11 +1,11 @@
 ---
 name: qiaomu-meta-skill
 description: |
-  Research, create, improve, migrate, evaluate, package, install-check, govern, and safely publish qiaomu-flavored agent skills from workflows, prompts, transcripts, docs, SOPs, runbooks, scripts, or notes. Use for new or existing skills, prior-art synthesis, routing/trigger boundaries, trigger or output evals, Skill IR, release gates, README/Profile preparation, GitHub repository and pull-request publication, versioned Releases, clean npx installation, team reuse, and create-and-publish flows. The publication path is self-contained and forbids direct default-branch pushes. Exclude one-off summaries, translations, ordinary docs, non-skill package publishing, and tasks that explicitly should not become a skill.
+  Research, create, improve, migrate, evaluate, package, install-check, govern, and safely publish Qiaomu-based reusable agent skills from project rules, workflows, prompts, transcripts, docs, SOPs, runbooks, scripts, or notes. Use for new or existing skills, project skill architecture, progressive disclosure, routing/trigger boundaries, prior-art synthesis, trigger or output evals, Skill IR, release gates, GitHub repository and pull-request publication, versioned Releases, clean npx installation, team reuse, and create-and-publish flows. The publication path is self-contained and forbids direct default-branch pushes. Exclude one-off summaries, translations, ordinary docs, non-skill package publishing, and tasks that explicitly should not become a skill.
 metadata:
-  author: Qiaomu
-  version: "2.8.1"
-  upstream_inspiration: yaojingang/yao-meta-skill; joeseesun/qiaomu-skill-publisher
+  author: Yat-mo fork, based on Qiaomu
+  version: "2.9.0"
+  upstream_inspiration: yaojingang/yao-meta-skill; joeseesun/qiaomu-skill-publisher; WoJiSama/skill-based-architecture
 ---
 
 # Qiaomu Meta Skill
@@ -22,8 +22,9 @@ Build reusable Qiaomu skill packages, not long prompts.
 - A package has one discoverable root `SKILL.md`; embedded examples and fixtures use `SKILL.example.md` or `SKILL.fixture.md`.
 - Do not turn one-off summaries, translations, explanations, or brainstorming into skills.
 - Match the user's action: create/refactor/package requests may edit; audit/evaluate/diagnose-only requests remain read-only; publish only when explicitly requested.
-- Default to concise Chinese-first `qiaomu-` names with no more than three preferred hyphen parts.
-- Add `Copyright (c) 向阳乔木`, X `https://x.com/vista8`, and GitHub `https://github.com/joeseesun/` unless another owner is requested.
+- Prefer concise Chinese-first names with no more than three meaningful hyphen parts. Use the `qiaomu-` prefix only when the user wants Qiaomu branding.
+- Require an explicit owner for publishable skills. Never assign Qiaomu authorship, profile assets, or copyright to another person's package by default.
+- For project-rule architecture, multi-workflow routing, cross-harness adapters, or self-maintenance, read [Progressive Skill Architecture](references/progressive-skill-architecture.md). Apply its mechanisms proportionally, not as a mandatory full scaffold.
 
 ## Modes
 
@@ -89,13 +90,15 @@ Prefer intent fidelity, source fidelity, and decision rules over an expanding to
 4. Pass the generalization gate for sample-driven core changes.
 5. Choose the lightest valid mode.
 6. Write the `description` early; run `evals/trigger_cases.json` before expanding structure.
-7. Create only earned resources. Never create ceremonial directories or duplicate README/SKILL prose.
-8. Export `reports/skill-ir.json` for Production+, public, or cross-platform packages.
-9. Add output evals when correctness, safety, persuasion, or repeatability cannot be shown by trigger tests alone.
-10. Keep mutations within the requested action boundary and preserve rollback for risky changes.
-11. Validate package, unit tests, trigger behavior, context budget, secret/trust boundaries, and evidence claims.
-12. Produce the creation handoff and clearly label missing evidence.
-13. When publication is requested, read [Self-Contained Skill Publishing](references/publishing.md), then use the bundled publisher for feature branch → validation → PR → merge → release/install verification; never push directly to the default branch.
+7. Choose the lightest structural tier that the content earns. Add routing manifests, workflows, thin shells, or hooks only when repeated tasks and target harnesses justify them.
+8. Write important principles as behavior plus a concrete check. A statement without a post-execution check is guidance, not a gate.
+9. Create only earned resources. Never create ceremonial directories or duplicate README/SKILL prose.
+10. Export `reports/skill-ir.json` for Production+, public, or cross-platform packages.
+11. Add output evals when correctness, safety, persuasion, or repeatability cannot be shown by trigger tests alone.
+12. Keep mutations within the requested action boundary and preserve rollback for risky changes.
+13. Validate package, unit tests, trigger behavior, route reachability when routing exists, context budget, secret/trust boundaries, and evidence claims.
+14. Produce the creation handoff and clearly label missing evidence.
+15. When publication is requested, read [Self-Contained Skill Publishing](references/publishing.md), then use the bundled publisher for feature branch → validation → PR → merge → release/install verification; never push directly to the default branch.
 
 Core commands:
 
@@ -121,7 +124,7 @@ Unavailable telemetry, provider runs, approval, install proof, or human review m
 For package-producing requests, provide only what the selected mode earns:
 
 1. working skill directory and trigger-aware root `SKILL.md`
-2. aligned `agents/interface.yaml`
+2. aligned `agents/interface.yaml`, plus `agents/openai.yaml` when OpenAI/Codex is a target
 3. human-facing README for shared/public skills
 4. trigger cases and generated trigger report for Production+
 5. Skill IR, prior-art report, and creation handoff for Production+
@@ -135,7 +138,7 @@ The final creation handoff must name the **reference skills studied**, give **ca
 1. Treat README as a product page: value, install, natural examples, prerequisites, outputs, configuration, risks, and troubleshooting.
 2. Audit without mutation when useful: `python3 scripts/publish_skill.py /path/to/skill --dry-run`.
 3. Only after an explicit publish request, run `python3 scripts/publish_skill.py /path/to/skill`.
-4. The bundled publisher prepares MIT LICENSE, README and Qiaomu profile assets; resolves skill/repository identity; blocks secrets and reused release versions; creates or reuses a GitHub repository; and publishes only through a feature branch and PR.
+4. The bundled publisher prepares MIT LICENSE and README; adds Qiaomu profile assets only for explicitly Qiaomu-owned packages; resolves skill/repository identity; blocks secrets and reused release versions; creates or reuses a GitHub repository; and publishes only through a feature branch and PR.
 5. Merge is blocked by conflicts, failed/pending checks or requested changes. Successful publication creates `vX.Y.Z`, verifies `npx skills add --list`, performs an isolated install, and runs the published release gate.
 6. Do not report publication complete until the remote default version, GitHub Release, discovery and clean installation are verified.
 
@@ -146,11 +149,12 @@ Detailed CLI and safety decisions: [Self-Contained Skill Publishing](references/
 - Prefer practical, concise, publishable Chinese output.
 - Keep one creator authority and one root skill entrypoint.
 - Preserve platform-neutral source plus minimal adapters.
+- Re-match routing for every new task; do not reuse the previous task's route from memory.
 - Public claims must match trigger, output, runtime, install, or human evidence actually present.
 - Upstream ideas are adopted semantically with attribution, not mirrored wholesale.
 
 ## Reference Map
 
-- Design: [Skill Engineering Method](references/skill-engineering-method.md), [Skill Archetypes](references/skill-archetypes.md), [Intent Dialogue](references/intent-dialogue.md), [Non-Skill Decision Tree](references/non-skill-decision-tree.md)
+- Design: [Skill Engineering Method](references/skill-engineering-method.md), [Progressive Skill Architecture](references/progressive-skill-architecture.md), [Skill Archetypes](references/skill-archetypes.md), [Intent Dialogue](references/intent-dialogue.md), [Non-Skill Decision Tree](references/non-skill-decision-tree.md)
 - Evidence: [Eval Playbook](references/eval-playbook.md), [Output Eval](references/output-eval-method.md), [Skill IR](references/skill-ir-method.md), [Governance](references/governance.md)
 - Release: [Self-Contained Publishing](references/publishing.md), [Review And Release Gates](references/review-release-gates.md), [GitHub README](references/github-readme-playbook.md), [SkillOps](references/skillops-loop.md)

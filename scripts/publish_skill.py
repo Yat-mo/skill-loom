@@ -116,11 +116,13 @@ def identity(root: Path) -> dict[str, str]:
     name = str(frontmatter.get("name", "")).strip()
     description = " ".join(str(frontmatter.get("description", "")).split())
     version = str(manifest.get("version", "")).strip()
-    owner = str(manifest.get("owner", "向阳乔木")).strip() or "向阳乔木"
+    owner = str(manifest.get("owner", "")).strip()
     if not name or not description:
         raise PublishError("SKILL.md frontmatter requires name and description")
     if manifest.get("name") != name:
         raise PublishError("manifest.json name does not match SKILL.md")
+    if not owner:
+        raise PublishError("manifest.json owner is required; publisher will not infer authorship")
     if not re.fullmatch(r"\d+\.\d+\.\d+", version):
         raise PublishError("manifest.json version must be semantic X.Y.Z")
     return {"name": name, "description": description, "version": version, "owner": owner}
@@ -328,8 +330,8 @@ python3 ~/.agents/skills/{meta['name']}/scripts/validate_skill.py ~/.agents/skil
 
 MIT
 
-Copyright (c) 向阳乔木
-X: https://x.com/vista8 · GitHub: https://github.com/joeseesun/
+Copyright (c) {meta['owner']}
+GitHub: https://github.com/{github_owner}/
 """
 
 
@@ -493,13 +495,14 @@ def publish(args: argparse.Namespace, runner: Runner = run) -> dict[str, Any]:
     owner = github_user(source, args.github_user, origin_owner, runner)
     repo = args.repo_name or origin_repo or meta["name"]
     slug = f"{owner}/{repo}"
+    qiaomu_owned = meta["owner"].casefold() in {"qiaomu", "向阳乔木", "乔向阳"}
     planned = prepare_package(
         source,
         meta,
         owner,
         repo,
         write=not args.dry_run,
-        include_profile=not args.skip_qiaomu_profile,
+        include_profile=qiaomu_owned and not args.skip_qiaomu_profile,
     )
     if args.dry_run:
         return {

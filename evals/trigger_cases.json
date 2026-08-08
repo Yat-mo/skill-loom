@@ -30,7 +30,10 @@
       "笔记",
       "对话记录",
       "材料",
-      "脚本"
+      "脚本",
+      "项目规则",
+      "專案規則",
+      "文章"
     ],
     "authoring_action": [
       "create",
@@ -55,7 +58,8 @@
       "安装",
       "补",
       "发布",
-      "打包"
+      "打包",
+      "融合"
     ],
     "qiaomu": [
       "qiaomu",
@@ -92,6 +96,7 @@
   },
   "negative_patterns": [
     "不要做成 skill",
+    "不要把它做成 skill",
     "不用做成 skill",
     "只要总结",
     "只解释",
@@ -164,6 +169,14 @@
     {
       "text": "把这个 qiaomu skill 直接推 main 发布，如果不安全就改成规范 PR 流程",
       "family": "cn_unsafe_publish_correction"
+    },
+    {
+      "text": "把这篇文章的 skill 架构理念融合进 qiaomu meta skill，并按需要加入路由和验证",
+      "family": "cn_architecture_integration"
+    },
+    {
+      "text": "把项目规则整理成可路由、可维护、能在 Codex 使用的 agent skill",
+      "family": "cn_project_rules_architecture"
     }
   ],
   "should_not_trigger": [
@@ -190,6 +203,10 @@
     {
       "text": "把这个普通 Python 包发布到 PyPI",
       "family": "non_skill_package_publish"
+    },
+    {
+      "text": "只解释这篇 skill 架构文章，不要创建或修改 skill",
+      "family": "architecture_explain_only"
     }
   ],
   "near_neighbor": [
@@ -204,6 +221,10 @@
     {
       "text": "给这个脚本加一个 argparse 参数",
       "family": "script_edit_only"
+    },
+    {
+      "text": "帮我整理 AGENTS.md，但不要把它做成 skill",
+      "family": "agents_doc_only"
     }
   ]
 }

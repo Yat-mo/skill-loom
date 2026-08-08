@@ -1,5 +1,52 @@
 # Prior-Art Research
 
+## Progressive project-skill architecture integration 2.9
+
+- Researched at: 2026-08-08
+- User-specified reference: [`WoJiSama/skill-based-architecture`](https://github.com/WoJiSama/skill-based-architecture) at `7169668151505cc09fec1248127549540ff12a76`
+- Base fork: [`joeseesun/qiaomu-meta-skill`](https://github.com/joeseesun/qiaomu-meta-skill) at `9d9eafe012e327258228186b5e816534c2951333`
+- Scope: add proportional project-rule architecture, route-time activation, concrete verification checks, new-task route discipline, and Codex adapter support without replacing Qiaomu's research/eval/release authority
+- License: both repositories are MIT
+- Catalog metrics: not used for this user-directed integration; popularity is not the selection premise
+- Built-in catalog smoke: 2/2 queries completed across skills.sh and SkillsMP; 51 deduplicated candidate families were preserved in `reports/prior-art-candidates.json`
+
+### Keep
+
+- structure serves content
+- activation over storage
+- reusable scaffolding without prefilled project content
+- principle plus executable/self-question check
+- every new task re-matches its route
+- task anchors for non-trivial work
+- route reachability, generated-adapter consistency, and AAR learning gates
+
+### Adapt
+
+- Three structural tiers replace a mandatory full project scaffold.
+- `routing.yaml`, thin shells, hooks, and Cursor entries are earned, target-specific adapters rather than universal files.
+- Line budgets are evaluation signals, not automatic split commands.
+- AAR is limited to non-trivial mutations; pure Q&A and read-only advice are exempt.
+- Cross-harness source remains platform-neutral while Codex gets `agents/openai.yaml`.
+
+### Reject
+
+- `primary: true` in Codex-facing frontmatter because it is not part of the Codex skill contract.
+- mandatory subagent workflows because harness and user policy may forbid delegation.
+- prefilled gotchas, rationalization tables, business rules, or project-specific examples.
+- duplicate hand-edited route tables across AGENTS/CLAUDE/CODEX/Cursor surfaces.
+- assigning Qiaomu ownership or profile assets to third-party packages without an explicit owner decision.
+
+### Invent
+
+- an owner-scoped publishing profile policy
+- a single progressive architecture reference that Qiaomu can route to without bloating the root `SKILL.md`
+- an explicit Codex adapter gate tied to declared OpenAI targets
+- Python 3.9 compatibility coverage for the built-in SkillsMP research path
+
+### Evidence boundary
+
+Source-level integration, trigger tests, route checks, package validation, and clean installation can validate mechanics. Long-session adherence, maintenance outcomes, and human usefulness remain `missing evidence` until observed in real projects.
+
 ## Self-contained publishing integration 2.8
 
 - Researched at: 2026-08-04

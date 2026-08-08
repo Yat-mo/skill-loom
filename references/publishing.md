@@ -9,7 +9,7 @@ The bundled `scripts/publish_skill.py` covers the useful behavior learned from `
 1. strict `SKILL.md` and `manifest.json` identity/version checks
 2. MIT `LICENSE` creation when missing
 3. README generation or quality validation
-4. bundled Qiaomu profile/QR assets and idempotent README block injection
+4. owner-scoped Qiaomu profile/QR assets and idempotent README block injection only for explicitly Qiaomu-owned packages
 5. GitHub owner/repository detection without conflating repository and skill names
 6. repository creation with a baseline default branch when needed
 7. feature-branch commit and push; direct default-branch push is forbidden
@@ -25,7 +25,7 @@ Read-only audit:
 python3 scripts/publish_skill.py /path/to/skill --dry-run
 ```
 
-Prepare LICENSE, README and Qiaomu profile locally without GitHub writes:
+Prepare LICENSE and README locally without GitHub writes; the Qiaomu profile is added only when `manifest.json.owner` explicitly identifies Qiaomu:
 
 ```bash
 python3 scripts/publish_skill.py /path/to/skill --prepare-only
@@ -56,12 +56,13 @@ Useful target controls:
 - `--branch codex/...`
 - `--private`
 - `--no-sync-local`
-- `--skip-qiaomu-profile` only for explicitly non-Qiaomu packages
+- `--skip-qiaomu-profile` disables profile injection even for an explicitly Qiaomu-owned package
 
 ## Safety decisions
 
 - Full publication is an external mutation and runs only after an explicit publish request.
 - `--dry-run` is read-only; unlike the legacy publisher it does not silently create or modify local files.
+- `manifest.json.owner` is mandatory. The publisher does not infer Qiaomu authorship, copyright or profile ownership.
 - New repositories receive an initial README baseline, then the actual Skill enters through a feature branch and PR.
 - Existing repositories never receive `HEAD:main` or equivalent direct pushes.
 - Staged content passes secret scanning and `git diff --cached --check` before commit.

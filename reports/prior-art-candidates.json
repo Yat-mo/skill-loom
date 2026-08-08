@@ -1,0 +1,1199 @@
+{
+  "ok": true,
+  "complete": true,
+  "researched_at": "2026-08-08",
+  "queries": [
+    "skill based architecture project rules",
+    "agent skill routing progressive disclosure"
+  ],
+  "metric_semantics": {
+    "skills_sh_installs": "ecosystem install telemetry; not ratings or correctness",
+    "skillsmp_repo_stars": "GitHub repository stars; not installs, ratings, or skill-specific quality",
+    "cross_catalog_score": "not calculated; metrics remain separate"
+  },
+  "query_runs": [
+    {
+      "query": "skill based architecture project rules",
+      "skills_sh": "ok",
+      "skillsmp": "ok",
+      "skills_sh_candidates": 16,
+      "skillsmp_candidates": 10
+    },
+    {
+      "query": "agent skill routing progressive disclosure",
+      "skills_sh": "ok",
+      "skillsmp": "ok",
+      "skills_sh_candidates": 18,
+      "skillsmp_candidates": 10
+    }
+  ],
+  "candidate_family_count": 51,
+  "candidates": [
+    {
+      "family_key": "trailofbits/skills:designing-workflow-skills",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "trailofbits/skills",
+        "skill_name": "designing-workflow-skills",
+        "family_key": "trailofbits/skills:designing-workflow-skills",
+        "skills_sh_installs": 3500,
+        "skills_sh_installs_display": "3.5K",
+        "skills_sh_url": "https://skills.sh/trailofbits/skills/designing-workflow-skills"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "samber/cc-skills:skill-progressive-disclosure-design",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "samber/cc-skills",
+        "skill_name": "skill-progressive-disclosure-design",
+        "family_key": "samber/cc-skills:skill-progressive-disclosure-design",
+        "skills_sh_installs": 1900,
+        "skills_sh_installs_display": "1.9K",
+        "skills_sh_url": "https://skills.sh/samber/cc-skills/skill-progressive-disclosure-design"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "grafana/skills:skill-authoring",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "grafana/skills",
+        "skill_name": "skill-authoring",
+        "family_key": "grafana/skills:skill-authoring",
+        "skills_sh_installs": 1600,
+        "skills_sh_installs_display": "1.6K",
+        "skills_sh_url": "https://skills.sh/grafana/skills/skill-authoring"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "pproenca/dot-skills:feature-arch",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "skill based architecture project rules",
+        "owner_repo": "pproenca/dot-skills",
+        "skill_name": "feature-arch",
+        "family_key": "pproenca/dot-skills:feature-arch",
+        "skills_sh_installs": 341,
+        "skills_sh_installs_display": "341",
+        "skills_sh_url": "https://skills.sh/pproenca/dot-skills/feature-arch"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "owl-listener/ai-design-skills:progressive-disclosure",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "owl-listener/ai-design-skills",
+        "skill_name": "progressive-disclosure",
+        "family_key": "owl-listener/ai-design-skills:progressive-disclosure",
+        "skills_sh_installs": 244,
+        "skills_sh_installs_display": "244",
+        "skills_sh_url": "https://skills.sh/owl-listener/ai-design-skills/progressive-disclosure"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "yonatangross/orchestkit:architecture-patterns",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "skill based architecture project rules",
+        "owner_repo": "yonatangross/orchestkit",
+        "skill_name": "architecture-patterns",
+        "family_key": "yonatangross/orchestkit:architecture-patterns",
+        "skills_sh_installs": 187,
+        "skills_sh_installs_display": "187",
+        "skills_sh_url": "https://skills.sh/yonatangross/orchestkit/architecture-patterns"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "lee-to/ai-factory:aif",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "skill based architecture project rules",
+        "owner_repo": "lee-to/ai-factory",
+        "skill_name": "aif",
+        "family_key": "lee-to/ai-factory:aif",
+        "skills_sh_installs": 73,
+        "skills_sh_installs_display": "73",
+        "skills_sh_url": "https://skills.sh/lee-to/ai-factory/aif"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "lee-to/ai-factory:aif-architecture",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "skill based architecture project rules",
+        "owner_repo": "lee-to/ai-factory",
+        "skill_name": "aif-architecture",
+        "family_key": "lee-to/ai-factory:aif-architecture",
+        "skills_sh_installs": 65,
+        "skills_sh_installs_display": "65",
+        "skills_sh_url": "https://skills.sh/lee-to/ai-factory/aif-architecture"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "teachingai/full-stack-skills:ddd4j-project-creator",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "skill based architecture project rules",
+        "owner_repo": "teachingai/full-stack-skills",
+        "skill_name": "ddd4j-project-creator",
+        "family_key": "teachingai/full-stack-skills:ddd4j-project-creator",
+        "skills_sh_installs": 52,
+        "skills_sh_installs_display": "52",
+        "skills_sh_url": "https://skills.sh/teachingai/full-stack-skills/ddd4j-project-creator"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "devton/agentic-workflow-blueprint:workflow-blueprint",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "devton/agentic-workflow-blueprint",
+        "skill_name": "workflow-blueprint",
+        "family_key": "devton/agentic-workflow-blueprint:workflow-blueprint",
+        "skills_sh_installs": 48,
+        "skills_sh_installs_display": "48",
+        "skills_sh_url": "https://skills.sh/devton/agentic-workflow-blueprint/workflow-blueprint"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "wojisama/skill-based-architecture:skill-based-architecture",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "skill based architecture project rules",
+        "owner_repo": "wojisama/skill-based-architecture",
+        "skill_name": "skill-based-architecture",
+        "family_key": "wojisama/skill-based-architecture:skill-based-architecture",
+        "skills_sh_installs": 43,
+        "skills_sh_installs_display": "43",
+        "skills_sh_url": "https://skills.sh/wojisama/skill-based-architecture/skill-based-architecture"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "choegyumin/agent-skills:frontend-layered-architecture",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "skill based architecture project rules",
+        "owner_repo": "choegyumin/agent-skills",
+        "skill_name": "frontend-layered-architecture",
+        "family_key": "choegyumin/agent-skills:frontend-layered-architecture",
+        "skills_sh_installs": 34,
+        "skills_sh_installs_display": "34",
+        "skills_sh_url": "https://skills.sh/choegyumin/agent-skills/frontend-layered-architecture"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "ravnhq/ai-toolkit:agent-init-deep",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "ravnhq/ai-toolkit",
+        "skill_name": "agent-init-deep",
+        "family_key": "ravnhq/ai-toolkit:agent-init-deep",
+        "skills_sh_installs": 33,
+        "skills_sh_installs_display": "33",
+        "skills_sh_url": "https://skills.sh/ravnhq/ai-toolkit/agent-init-deep"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "flpbalada/my-opencode-config:project-structure",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "skill based architecture project rules",
+        "owner_repo": "flpbalada/my-opencode-config",
+        "skill_name": "project-structure",
+        "family_key": "flpbalada/my-opencode-config:project-structure",
+        "skills_sh_installs": 27,
+        "skills_sh_installs_display": "27",
+        "skills_sh_url": "https://skills.sh/flpbalada/my-opencode-config/project-structure"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "partme-ai/full-stack-skills:ddd4j-project-creator",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "skill based architecture project rules",
+        "owner_repo": "partme-ai/full-stack-skills",
+        "skill_name": "ddd4j-project-creator",
+        "family_key": "partme-ai/full-stack-skills:ddd4j-project-creator",
+        "skills_sh_installs": 23,
+        "skills_sh_installs_display": "23",
+        "skills_sh_url": "https://skills.sh/partme-ai/full-stack-skills/ddd4j-project-creator"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "neeeophytee/finding-unknowns-skills:progressive-disclosure",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "neeeophytee/finding-unknowns-skills",
+        "skill_name": "progressive-disclosure",
+        "family_key": "neeeophytee/finding-unknowns-skills:progressive-disclosure",
+        "skills_sh_installs": 22,
+        "skills_sh_installs_display": "22",
+        "skills_sh_url": "https://skills.sh/neeeophytee/finding-unknowns-skills/progressive-disclosure"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "aryaniyaps/lamina:lamina-progressive-disclosure",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "aryaniyaps/lamina",
+        "skill_name": "lamina-progressive-disclosure",
+        "family_key": "aryaniyaps/lamina:lamina-progressive-disclosure",
+        "skills_sh_installs": 19,
+        "skills_sh_installs_display": "19",
+        "skills_sh_url": "https://skills.sh/aryaniyaps/lamina/lamina-progressive-disclosure"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "tencentcloudbase/cloudbase-mcp:skill-authoring",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "tencentcloudbase/cloudbase-mcp",
+        "skill_name": "skill-authoring",
+        "family_key": "tencentcloudbase/cloudbase-mcp:skill-authoring",
+        "skills_sh_installs": 19,
+        "skills_sh_installs_display": "19",
+        "skills_sh_url": "https://skills.sh/tencentcloudbase/cloudbase-mcp/skill-authoring"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "michael-f-bryan/skills:knowledge-base-navigator",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "michael-f-bryan/skills",
+        "skill_name": "knowledge-base-navigator",
+        "family_key": "michael-f-bryan/skills:knowledge-base-navigator",
+        "skills_sh_installs": 18,
+        "skills_sh_installs_display": "18",
+        "skills_sh_url": "https://skills.sh/michael-f-bryan/skills/knowledge-base-navigator"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "juliusbrussee/cavekit:context-architecture",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "juliusbrussee/cavekit",
+        "skill_name": "context-architecture",
+        "family_key": "juliusbrussee/cavekit:context-architecture",
+        "skills_sh_installs": 17,
+        "skills_sh_installs_display": "17",
+        "skills_sh_url": "https://skills.sh/juliusbrussee/cavekit/context-architecture"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "latestaiagents/agent-skills:progressive-disclosure",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "latestaiagents/agent-skills",
+        "skill_name": "progressive-disclosure",
+        "family_key": "latestaiagents/agent-skills:progressive-disclosure",
+        "skills_sh_installs": 17,
+        "skills_sh_installs_display": "17",
+        "skills_sh_url": "https://skills.sh/latestaiagents/agent-skills/progressive-disclosure"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "modu-ai/moai-adk:moai-foundation-cc",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "modu-ai/moai-adk",
+        "skill_name": "moai-foundation-cc",
+        "family_key": "modu-ai/moai-adk:moai-foundation-cc",
+        "skills_sh_installs": 16,
+        "skills_sh_installs_display": "16",
+        "skills_sh_url": "https://skills.sh/modu-ai/moai-adk/moai-foundation-cc"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "yonatangross/skillforge-claude-plugin:architecture-patterns",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "skill based architecture project rules",
+        "owner_repo": "yonatangross/skillforge-claude-plugin",
+        "skill_name": "architecture-patterns",
+        "family_key": "yonatangross/skillforge-claude-plugin:architecture-patterns",
+        "skills_sh_installs": 15,
+        "skills_sh_installs_display": "15",
+        "skills_sh_url": "https://skills.sh/yonatangross/skillforge-claude-plugin/architecture-patterns"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "2389-research/claude-plugins:firebase-development:project-setup",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "skill based architecture project rules",
+        "owner_repo": "2389-research/claude-plugins",
+        "skill_name": "firebase-development:project-setup",
+        "family_key": "2389-research/claude-plugins:firebase-development:project-setup",
+        "skills_sh_installs": 13,
+        "skills_sh_installs_display": "13",
+        "skills_sh_url": "https://skills.sh/2389-research/claude-plugins/firebase-development:project-setup"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "habonn/portal-skills:skill-auditor",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "skill based architecture project rules",
+        "owner_repo": "habonn/portal-skills",
+        "skill_name": "skill-auditor",
+        "family_key": "habonn/portal-skills:skill-auditor",
+        "skills_sh_installs": 13,
+        "skills_sh_installs_display": "13",
+        "skills_sh_url": "https://skills.sh/habonn/portal-skills/skill-auditor"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "yha9806/academic-writing-toolkit:progress",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "yha9806/academic-writing-toolkit",
+        "skill_name": "progress",
+        "family_key": "yha9806/academic-writing-toolkit:progress",
+        "skills_sh_installs": 13,
+        "skills_sh_installs_display": "13",
+        "skills_sh_url": "https://skills.sh/yha9806/academic-writing-toolkit/progress"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "krushnal121/agentic:project-rules",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "skill based architecture project rules",
+        "owner_repo": "krushnal121/agentic",
+        "skill_name": "project-rules",
+        "family_key": "krushnal121/agentic:project-rules",
+        "skills_sh_installs": 11,
+        "skills_sh_installs_display": "11",
+        "skills_sh_url": "https://skills.sh/krushnal121/agentic/project-rules"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "techygarg/lattice:knowledge-priming-refiner",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "skill based architecture project rules",
+        "owner_repo": "techygarg/lattice",
+        "skill_name": "knowledge-priming-refiner",
+        "family_key": "techygarg/lattice:knowledge-priming-refiner",
+        "skills_sh_installs": 11,
+        "skills_sh_installs_display": "11",
+        "skills_sh_url": "https://skills.sh/techygarg/lattice/knowledge-priming-refiner"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "robertalvv/flutter-skills:architecture-auditor",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "skill based architecture project rules",
+        "owner_repo": "robertalvv/flutter-skills",
+        "skill_name": "architecture-auditor",
+        "family_key": "robertalvv/flutter-skills:architecture-auditor",
+        "skills_sh_installs": 10,
+        "skills_sh_installs_display": "10",
+        "skills_sh_url": "https://skills.sh/robertalvv/flutter-skills/architecture-auditor"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "bfmcneill/agi-marketplace:progressive-disclosure",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "bfmcneill/agi-marketplace",
+        "skill_name": "progressive-disclosure",
+        "family_key": "bfmcneill/agi-marketplace:progressive-disclosure",
+        "skills_sh_installs": 7,
+        "skills_sh_installs_display": "7",
+        "skills_sh_url": "https://skills.sh/bfmcneill/agi-marketplace/progressive-disclosure"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "khw1031/ai-library:progressive-disclosure",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "khw1031/ai-library",
+        "skill_name": "progressive-disclosure",
+        "family_key": "khw1031/ai-library:progressive-disclosure",
+        "skills_sh_installs": 7,
+        "skills_sh_installs_display": "7",
+        "skills_sh_url": "https://skills.sh/khw1031/ai-library/progressive-disclosure"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "nangongwentian-fe/jay-skills:progressive-disclosure-docs",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "nangongwentian-fe/jay-skills",
+        "skill_name": "progressive-disclosure-docs",
+        "family_key": "nangongwentian-fe/jay-skills:progressive-disclosure-docs",
+        "skills_sh_installs": 7,
+        "skills_sh_installs_display": "7",
+        "skills_sh_url": "https://skills.sh/nangongwentian-fe/jay-skills/progressive-disclosure-docs"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "codewithkrushnal/agentic:project-rules",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "skill based architecture project rules",
+        "owner_repo": "codewithkrushnal/agentic",
+        "skill_name": "project-rules",
+        "family_key": "codewithkrushnal/agentic:project-rules",
+        "skills_sh_installs": 5,
+        "skills_sh_installs_display": "5",
+        "skills_sh_url": "https://skills.sh/codewithkrushnal/agentic/project-rules"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "hdeibler/universal-design-principles:progressive-disclosure",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "agent skill routing progressive disclosure",
+        "owner_repo": "hdeibler/universal-design-principles",
+        "skill_name": "progressive-disclosure",
+        "family_key": "hdeibler/universal-design-principles:progressive-disclosure",
+        "skills_sh_installs": 2,
+        "skills_sh_installs_display": "2",
+        "skills_sh_url": "https://skills.sh/hdeibler/universal-design-principles/progressive-disclosure"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "openclaw/openclaw:acp-router",
+      "queries": [
+        "agent skill routing progressive disclosure",
+        "skill based architecture project rules"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "acp-router",
+        "author": "openclaw",
+        "description": "Route plain-language requests for Claude Code, Cursor, Copilot, OpenClaw ACP, OpenCode, Gemini CLI, Qwen, Kiro, Kimi, iFlow, Factory Droid, Kilocode, or explicit ACP harness work into either OpenClaw ACP runtime sessions or direct acpx-driven sessions (\"telephone game\" flow). For coding-agent thread requests, read this skill first, then use only `sessions_spawn` for thread creation. Codex chat binding defaults to the native Codex app-server plugin unless ACP is explicit or background spawn needs ACP.",
+        "content_language": "en",
+        "github_url": "https://github.com/openclaw/openclaw/tree/main/extensions/acpx/skills/acp-router",
+        "skillsmp_url": "https://skillsmp.com/creators/openclaw/openclaw/extensions-acpx-skills-acp-router",
+        "repo_stars": 385453,
+        "catalog_updated_at": "2026-07-16T15:51:30+00:00",
+        "source_key": "openclaw/openclaw:extensions/acpx/skills/acp-router",
+        "family_key": "openclaw/openclaw:acp-router",
+        "aliases": [],
+        "query": "skill based architecture project rules"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "openclaw/openclaw:agent-transcript",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "agent-transcript",
+        "author": "openclaw",
+        "description": "Add a redacted agent transcript section to GitHub PR or issue bodies during OpenClaw agent-created PR/issue workflows.",
+        "content_language": "en",
+        "github_url": "https://github.com/openclaw/openclaw/tree/main/.agents/skills/agent-transcript",
+        "skillsmp_url": "https://skillsmp.com/creators/openclaw/openclaw/agents-skills-agent-transcript",
+        "repo_stars": 385453,
+        "catalog_updated_at": "2026-05-26T15:17:53+00:00",
+        "source_key": "openclaw/openclaw:.agents/skills/agent-transcript",
+        "family_key": "openclaw/openclaw:agent-transcript",
+        "aliases": [],
+        "query": "agent skill routing progressive disclosure"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "openclaw/openclaw:clawhub",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "clawhub",
+        "author": "openclaw",
+        "description": "Search ClawHub for skills when a requested capability is not already available; install, verify, update, uninstall, publish, or sync skills.",
+        "content_language": "en",
+        "github_url": "https://github.com/openclaw/openclaw/tree/main/skills/clawhub",
+        "skillsmp_url": "https://skillsmp.com/creators/openclaw/openclaw/skills-clawhub",
+        "repo_stars": 385453,
+        "catalog_updated_at": "2026-08-03T21:39:02+00:00",
+        "source_key": "openclaw/openclaw:skills/clawhub",
+        "family_key": "openclaw/openclaw:clawhub",
+        "aliases": [],
+        "query": "skill based architecture project rules"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "openclaw/openclaw:coding-agent",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "coding-agent",
+        "author": "openclaw",
+        "description": "Delegate coding work to Codex, Claude Code, or OpenCode as background workers; not simple edits or read-only code lookup.",
+        "content_language": "en",
+        "github_url": "https://github.com/openclaw/openclaw/tree/main/skills/coding-agent",
+        "skillsmp_url": "https://skillsmp.com/creators/openclaw/openclaw/skills-coding-agent",
+        "repo_stars": 385453,
+        "catalog_updated_at": "2026-07-29T05:43:42+00:00",
+        "source_key": "openclaw/openclaw:skills/coding-agent",
+        "family_key": "openclaw/openclaw:coding-agent",
+        "aliases": [],
+        "query": "agent skill routing progressive disclosure"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "openclaw/openclaw:control-ui-e2e",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "control-ui-e2e",
+        "author": "openclaw",
+        "description": "Use when testing, fixing, or extending the OpenClaw Control UI GUI with Vitest + Playwright end-to-end checks, mocked Gateway WebSocket flows, mocked dashboard runs, screenshots/videos, or agent-verifiable browser proof.",
+        "content_language": "en",
+        "github_url": "https://github.com/openclaw/openclaw/tree/main/.agents/skills/control-ui-e2e",
+        "skillsmp_url": "https://skillsmp.com/creators/openclaw/openclaw/agents-skills-control-ui-e2e",
+        "repo_stars": 385453,
+        "catalog_updated_at": "2026-08-06T22:57:41+00:00",
+        "source_key": "openclaw/openclaw:.agents/skills/control-ui-e2e",
+        "family_key": "openclaw/openclaw:control-ui-e2e",
+        "aliases": [],
+        "query": "agent skill routing progressive disclosure"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "openclaw/openclaw:discord-clawd",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "discord-clawd",
+        "author": "openclaw",
+        "description": "Use to talk to the Discord-backed OpenClaw agent/session; not for archive search.",
+        "content_language": "en",
+        "github_url": "https://github.com/openclaw/openclaw/tree/main/.agents/skills/discord-clawd",
+        "skillsmp_url": "https://skillsmp.com/creators/openclaw/openclaw/agents-skills-discord-clawd",
+        "repo_stars": 385453,
+        "catalog_updated_at": "2026-04-27T06:50:15+00:00",
+        "source_key": "openclaw/openclaw:.agents/skills/discord-clawd",
+        "family_key": "openclaw/openclaw:discord-clawd",
+        "aliases": [],
+        "query": "agent skill routing progressive disclosure"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "openclaw/openclaw:discord-user-post",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "discord-user-post",
+        "author": "openclaw",
+        "description": "Post an approved message as the logged-in Discord user through the Discord desktop app. Use for release announcements or other direct user-authored Discord posts; not for OpenClaw channel sends, bots, webhooks, relays, agent sessions, or archive search.",
+        "content_language": "en",
+        "github_url": "https://github.com/openclaw/openclaw/tree/main/.agents/skills/discord-user-post",
+        "skillsmp_url": "https://skillsmp.com/creators/openclaw/openclaw/agents-skills-discord-user-post",
+        "repo_stars": 385453,
+        "catalog_updated_at": "2026-06-15T09:26:30+00:00",
+        "source_key": "openclaw/openclaw:.agents/skills/discord-user-post",
+        "family_key": "openclaw/openclaw:discord-user-post",
+        "aliases": [],
+        "query": "agent skill routing progressive disclosure"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "openclaw/openclaw:gemini",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "gemini",
+        "author": "openclaw",
+        "description": "Gemini CLI one-shot prompts, summaries, generation, skills, hooks, MCP, or Gemma routing.",
+        "content_language": "en",
+        "github_url": "https://github.com/openclaw/openclaw/tree/main/skills/gemini",
+        "skillsmp_url": "https://skillsmp.com/creators/openclaw/openclaw/skills-gemini",
+        "repo_stars": 385453,
+        "catalog_updated_at": "2026-05-17T10:50:27+00:00",
+        "source_key": "openclaw/openclaw:skills/gemini",
+        "family_key": "openclaw/openclaw:gemini",
+        "aliases": [],
+        "query": "skill based architecture project rules"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "openclaw/openclaw:prose",
+      "queries": [
+        "agent skill routing progressive disclosure",
+        "skill based architecture project rules"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "prose",
+        "author": "openclaw",
+        "description": "OpenProse VM skill pack. Activate on any `prose` command, .prose files, or OpenProse mentions; orchestrates multi-agent workflows.",
+        "content_language": "en",
+        "github_url": "https://github.com/openclaw/openclaw/tree/main/extensions/open-prose/skills/prose",
+        "skillsmp_url": "https://skillsmp.com/creators/openclaw/openclaw/extensions-open-prose-skills-prose",
+        "repo_stars": 385453,
+        "catalog_updated_at": "2026-07-11T08:09:51+00:00",
+        "source_key": "openclaw/openclaw:extensions/open-prose/skills/prose",
+        "family_key": "openclaw/openclaw:prose",
+        "aliases": [],
+        "query": "skill based architecture project rules"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "openclaw/openclaw:qqbot-channel",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "qqbot-channel",
+        "author": "openclaw",
+        "description": "QQ channel management skill. Use qqbot_channel_api for explicit QQ channel-management requests; confirm write, delete, and bulk actions before calling authenticated QQ Open Platform endpoints.",
+        "content_language": "zh",
+        "github_url": "https://github.com/openclaw/openclaw/tree/main/extensions/qqbot/skills/qqbot-channel",
+        "skillsmp_url": "https://skillsmp.com/creators/openclaw/openclaw/extensions-qqbot-skills-qqbot-channel",
+        "repo_stars": 385453,
+        "catalog_updated_at": "2026-06-30T05:48:52+00:00",
+        "source_key": "openclaw/openclaw:extensions/qqbot/skills/qqbot-channel",
+        "family_key": "openclaw/openclaw:qqbot-channel",
+        "aliases": [],
+        "query": "skill based architecture project rules"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "openclaw/openclaw:skill-creator",
+      "queries": [
+        "agent skill routing progressive disclosure",
+        "skill based architecture project rules"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "skill-creator",
+        "author": "openclaw",
+        "description": "Create, edit, audit, tidy, validate, or restructure AgentSkills and SKILL.md files.",
+        "content_language": "en",
+        "github_url": "https://github.com/openclaw/openclaw/tree/main/skills/skill-creator",
+        "skillsmp_url": "https://skillsmp.com/creators/openclaw/openclaw/skills-skill-creator",
+        "repo_stars": 385453,
+        "catalog_updated_at": "2026-07-01T03:24:22+00:00",
+        "source_key": "openclaw/openclaw:skills/skill-creator",
+        "family_key": "openclaw/openclaw:skill-creator",
+        "aliases": [],
+        "query": "skill based architecture project rules"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "openclaw/openclaw:technical-documentation",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "technical-documentation",
+        "author": "openclaw",
+        "description": "Build and review high-quality technical docs as well as agent instruction files in your repository.",
+        "content_language": "en",
+        "github_url": "https://github.com/openclaw/openclaw/tree/main/.agents/skills/technical-documentation",
+        "skillsmp_url": "https://skillsmp.com/creators/openclaw/openclaw/agents-skills-technical-documentation",
+        "repo_stars": 385453,
+        "catalog_updated_at": "2026-05-25T06:20:14+00:00",
+        "source_key": "openclaw/openclaw:.agents/skills/technical-documentation",
+        "family_key": "openclaw/openclaw:technical-documentation",
+        "aliases": [],
+        "query": "agent skill routing progressive disclosure"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "openclaw/openclaw:telegram-crabbox-e2e-proof",
+      "queries": [
+        "agent skill routing progressive disclosure"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "telegram-crabbox-e2e-proof",
+        "author": "openclaw",
+        "description": "Use when reviewing, reproducing, or proving OpenClaw Telegram behavior with a real Telegram user on Crabbox, including PR review workflows that need an agent-controlled Telegram Desktop recording, TDLib user-driver commands, Convex-leased credentials, WebVNC observation, and motion-trimmed artifacts.",
+        "content_language": "en",
+        "github_url": "https://github.com/openclaw/openclaw/tree/main/.agents/skills/telegram-crabbox-e2e-proof",
+        "skillsmp_url": "https://skillsmp.com/creators/openclaw/openclaw/agents-skills-telegram-crabbox-e2e-proof",
+        "repo_stars": 385453,
+        "catalog_updated_at": "2026-07-27T08:33:06+00:00",
+        "source_key": "openclaw/openclaw:.agents/skills/telegram-crabbox-e2e-proof",
+        "family_key": "openclaw/openclaw:telegram-crabbox-e2e-proof",
+        "aliases": [],
+        "query": "agent skill routing progressive disclosure"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "obra/superpowers:using-superpowers",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "using-superpowers",
+        "author": "obra",
+        "description": "Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions",
+        "content_language": "en",
+        "github_url": "https://github.com/obra/superpowers/tree/main/skills/using-superpowers",
+        "skillsmp_url": "https://skillsmp.com/creators/obra/superpowers/skills-using-superpowers",
+        "repo_stars": 268638,
+        "catalog_updated_at": "2026-07-24T00:27:16+00:00",
+        "source_key": "obra/superpowers:skills/using-superpowers",
+        "family_key": "obra/superpowers:using-superpowers",
+        "aliases": [],
+        "query": "skill based architecture project rules"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "obra/superpowers:writing-skills",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "writing-skills",
+        "author": "obra",
+        "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment",
+        "content_language": "en",
+        "github_url": "https://github.com/obra/superpowers/tree/main/skills/writing-skills",
+        "skillsmp_url": "https://skillsmp.com/creators/obra/superpowers/skills-writing-skills",
+        "repo_stars": 268638,
+        "catalog_updated_at": "2026-07-24T00:27:16+00:00",
+        "source_key": "obra/superpowers:skills/writing-skills",
+        "family_key": "obra/superpowers:writing-skills",
+        "aliases": [],
+        "query": "skill based architecture project rules"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "affaan-m/ecc:continuous-learning",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "continuous-learning",
+        "author": "affaan-m",
+        "description": "[DEPRECATED - use continuous-learning-v2] Legacy v1 stop-hook skill extractor. v2 is a strict superset with instinct-based, project-scoped, hook-reliable learning. Do not invoke v1; route continuous learning, session learning, and pattern extraction requests to continuous-learning-v2.",
+        "content_language": "en",
+        "github_url": "https://github.com/affaan-m/ECC/tree/main/skills/continuous-learning",
+        "skillsmp_url": "https://skillsmp.com/creators/affaan-m/ecc/skills-continuous-learning",
+        "repo_stars": 238527,
+        "catalog_updated_at": "2026-06-11T12:12:21+00:00",
+        "source_key": "affaan-m/ecc:skills/continuous-learning",
+        "family_key": "affaan-m/ecc:continuous-learning",
+        "aliases": [],
+        "query": "skill based architecture project rules"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "affaan-m/ecc:continuous-learning-v2",
+      "queries": [
+        "skill based architecture project rules"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "continuous-learning-v2",
+        "author": "affaan-m",
+        "description": "Instinct-based learning system that observes sessions via hooks, creates atomic instincts with confidence scoring, and evolves them into skills/commands/agents.",
+        "content_language": "zh",
+        "github_url": "https://github.com/affaan-m/ECC/tree/main/docs/zh-TW/skills/continuous-learning-v2",
+        "skillsmp_url": "https://skillsmp.com/creators/affaan-m/ecc/docs-zh-tw-skills-continuous-learning-v2",
+        "repo_stars": 238527,
+        "catalog_updated_at": "2026-04-21T22:41:36+00:00",
+        "source_key": "affaan-m/ecc:docs/zh-tw/skills/continuous-learning-v2",
+        "family_key": "affaan-m/ecc:continuous-learning-v2",
+        "aliases": [],
+        "query": "skill based architecture project rules"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    }
+  ],
+  "missing_evidence": [],
+  "next_steps": [
+    "shortlist by job relevance and role coverage, not combined popularity",
+    "open canonical GitHub source and inspect SKILL.md before adoption",
+    "verify license, maintenance, permissions, security, duplication, and rating evidence",
+    "write keep/adapt/reject/invent synthesis before authoring"
+  ]
+}

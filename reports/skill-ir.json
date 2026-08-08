@@ -1,13 +1,13 @@
 {
   "schema_version": "2.0.0-qiaomu-lite",
-  "generated_at": "2026-08-04",
+  "generated_at": "2026-08-08",
   "package": {
     "name": "qiaomu-meta-skill",
-    "version": "2.8.1",
-    "owner": "Qiaomu",
+    "version": "2.9.0",
+    "owner": "Yat-mo",
     "maturity_tier": "governed",
     "lifecycle_stage": "library",
-    "upstream_inspiration": "https://github.com/yaojingang/yao-meta-skill; https://github.com/joeseesun/qiaomu-skill-publisher",
+    "upstream_inspiration": "https://github.com/joeseesun/qiaomu-meta-skill; https://github.com/yaojingang/yao-meta-skill; https://github.com/joeseesun/qiaomu-skill-publisher; https://github.com/WoJiSama/skill-based-architecture",
     "upstream_sync": {
       "reviewed_commit": "e15472e1f5dc96f79ea0259bf9fdf67598cea356",
       "reviewed_at": "2026-07-31",
@@ -16,8 +16,8 @@
     }
   },
   "intent": {
-    "description": "Research, create, improve, migrate, evaluate, package, install-check, govern, and safely publish qiaomu-flavored agent skills from workflows, prompts, transcripts, docs, SOPs, runbooks, scripts, or notes. Use for new or existing skills, prior-art synthesis, routing/trigger boundaries, trigger or output evals, Skill IR, release gates, README/Profile preparation, GitHub repository and pull-request publication, versioned Releases, clean npx installation, team reuse, and create-and-publish flows. The publication path is self-contained and forbids direct default-branch pushes. Exclude one-off summaries, translations, ordinary docs, non-skill package publishing, and tasks that explicitly should not become a skill.\n",
-    "job_to_be_done": "Research, create, improve, migrate, evaluate, package, install-check, govern, and safely publish qiaomu-flavored agent skills from workflows, prompts, transcripts, docs, SOPs, runbooks, scripts, or notes. Use for new or existing skills, prior-art synthesis, routing/trigger boundaries, trigger or output evals, Skill IR, release gates, README/Profile preparation, GitHub repository and pull-request publication, versioned Releases, clean npx installation, team reuse, and create-and-publish flows. The publication path is self-contained and forbids direct default-branch pushes. Exclude one-off summaries, translations, ordinary docs, non-skill package publishing, and tasks that explicitly should not become a skill.\n",
+    "description": "Research, create, improve, migrate, evaluate, package, install-check, govern, and safely publish Qiaomu-based reusable agent skills from project rules, workflows, prompts, transcripts, docs, SOPs, runbooks, scripts, or notes. Use for new or existing skills, project skill architecture, progressive disclosure, routing/trigger boundaries, prior-art synthesis, trigger or output evals, Skill IR, release gates, GitHub repository and pull-request publication, versioned Releases, clean npx installation, team reuse, and create-and-publish flows. The publication path is self-contained and forbids direct default-branch pushes. Exclude one-off summaries, translations, ordinary docs, non-skill package publishing, and tasks that explicitly should not become a skill.\n",
+    "job_to_be_done": "Research, create, improve, migrate, evaluate, package, install-check, govern, and safely publish Qiaomu-based reusable agent skills from project rules, workflows, prompts, transcripts, docs, SOPs, runbooks, scripts, or notes. Use for new or existing skills, project skill architecture, progressive disclosure, routing/trigger boundaries, prior-art synthesis, trigger or output evals, Skill IR, release gates, GitHub repository and pull-request publication, versioned Releases, clean npx installation, team reuse, and create-and-publish flows. The publication path is self-contained and forbids direct default-branch pushes. Exclude one-off summaries, translations, ordinary docs, non-skill package publishing, and tasks that explicitly should not become a skill.\n",
     "target_users": [
       "Qiaomu operator"
     ],
@@ -25,11 +25,10 @@
     "outputs": [],
     "exclusions": [],
     "qiaomu_defaults": {
-      "skill_name_prefix": "qiaomu-",
+      "skill_name_prefix": "optional-qiaomu-branding",
       "max_preferred_hyphen_parts": 3,
-      "copyright": "Copyright (c) 向阳乔木",
-      "x": "https://x.com/vista8",
-      "github": "https://github.com/joeseesun/"
+      "owner_policy": "manifest owner is required; never infer Qiaomu ownership for third-party packages",
+      "upstream_credit": "https://github.com/joeseesun/qiaomu-meta-skill"
     }
   },
   "triggers": {
@@ -47,7 +46,9 @@
       "Check whether this agent skill package installs cleanly and whether nested examples can be mis-discovered.",
       "把这个 qiaomu skill 发布到 GitHub，并完成 PR、Release 和干净安装验证",
       "先 dry-run 检查这个乔木 skill 的 README、Profile、版本和发布条件，不要写 GitHub",
-      "把这个 qiaomu skill 直接推 main 发布，如果不安全就改成规范 PR 流程"
+      "把这个 qiaomu skill 直接推 main 发布，如果不安全就改成规范 PR 流程",
+      "把这篇文章的 skill 架构理念融合进 qiaomu meta skill，并按需要加入路由和验证",
+      "把项目规则整理成可路由、可维护、能在 Codex 使用的 agent skill"
     ],
     "should_not_trigger": [
       "解释一下什么是 agent skill，不要做成 skill",
@@ -55,12 +56,14 @@
       "帮我写个产品标题",
       "Summarize this random note in three bullets.",
       "Just explain the difference between prompts and skills.",
-      "把这个普通 Python 包发布到 PyPI"
+      "把这个普通 Python 包发布到 PyPI",
+      "只解释这篇 skill 架构文章，不要创建或修改 skill"
     ],
     "near_neighbor": [
       "帮我看一下这个 README 顺不顺，但不要改成 skill",
       "头脑风暴几个插件名字，先不要打包发布",
-      "给这个脚本加一个 argparse 参数"
+      "给这个脚本加一个 argparse 参数",
+      "帮我整理 AGENTS.md，但不要把它做成 skill"
     ]
   },
   "workflow": {
@@ -73,8 +76,9 @@
       "A package has one discoverable root `SKILL.md`; embedded examples and fixtures use `SKILL.example.md` or `SKILL.fixture.md`.",
       "Do not turn one-off summaries, translations, explanations, or brainstorming into skills.",
       "Match the user's action: create/refactor/package requests may edit; audit/evaluate/diagnose-only requests remain read-only; publish only when explicitly requested.",
-      "Default to concise Chinese-first `qiaomu-` names with no more than three preferred hyphen parts.",
-      "Add `Copyright (c) 向阳乔木`, X `https://x.com/vista8`, and GitHub `https://github.com/joeseesun/` unless another owner is requested."
+      "Prefer concise Chinese-first names with no more than three meaningful hyphen parts. Use the `qiaomu-` prefix only when the user wants Qiaomu branding.",
+      "Require an explicit owner for publishable skills. Never assign Qiaomu authorship, profile assets, or copyright to another person's package by default.",
+      "For project-rule architecture, multi-workflow routing, cross-harness adapters, or self-maintenance, read [Progressive Skill Architecture](references/progressive-skill-architecture.md). Apply its mechanisms proportionally, not as a mandatory full scaffold."
     ],
     "compact_workflow": [
       "Decide whether the request deserves a reusable skill; otherwise answer directly and create no package.",
@@ -83,11 +87,13 @@
       "Pass the generalization gate for sample-driven core changes.",
       "Choose the lightest valid mode.",
       "Write the `description` early; run `evals/trigger_cases.json` before expanding structure.",
+      "Choose the lightest structural tier that the content earns. Add routing manifests, workflows, thin shells, or hooks only when repeated tasks and target harnesses justify them.",
+      "Write important principles as behavior plus a concrete check. A statement without a post-execution check is guidance, not a gate.",
       "Create only earned resources. Never create ceremonial directories or duplicate README/SKILL prose.",
       "Export `reports/skill-ir.json` for Production+, public, or cross-platform packages.",
       "Add output evals when correctness, safety, persuasion, or repeatability cannot be shown by trigger tests alone.",
       "Keep mutations within the requested action boundary and preserve rollback for risky changes.",
-      "Validate package, unit tests, trigger behavior, context budget, secret/trust boundaries, and evidence claims.",
+      "Validate package, unit tests, trigger behavior, route reachability when routing exists, context budget, secret/trust boundaries, and evidence claims.",
       "Produce the creation handoff and clearly label missing evidence.",
       "When publication is requested, read [Self-Contained Skill Publishing](references/publishing.md), then use the bundled publisher for feature branch → validation → PR → merge → release/install verification; never push directly to the default branch."
     ],
@@ -99,7 +105,7 @@
     ],
     "output_contract": [
       "working skill directory and trigger-aware root `SKILL.md`",
-      "aligned `agents/interface.yaml`",
+      "aligned `agents/interface.yaml`, plus `agents/openai.yaml` when OpenAI/Codex is a target",
       "human-facing README for shared/public skills",
       "trigger cases and generated trigger report for Production+",
       "Skill IR, prior-art report, and creation handoff for Production+",
@@ -119,6 +125,7 @@
       "references/operating-modes.md",
       "references/output-eval-method.md",
       "references/prior-art-research.md",
+      "references/progressive-skill-architecture.md",
       "references/publishing.md",
       "references/qa-ladder.md",
       "references/resource-boundaries.md",
@@ -145,6 +152,7 @@
       "reports/creation-handoff.md",
       "reports/iteration-2026-08-03-v2.7.md",
       "reports/iteration-2026-08-03.md",
+      "reports/prior-art-candidates.json",
       "reports/prior-art-research.md",
       "reports/skill-ir.json",
       "reports/skillsmp-integration-2026-08-03.md",
@@ -202,6 +210,8 @@
       "user-facing reference, lesson, rejection, advantage, and evidence handoff",
       "generalization gate for sample-driven core changes",
       "agents/interface.yaml",
+      "agents/openai.yaml when OpenAI/Codex is a target",
+      "progressive architecture tier is justified",
       "evals/trigger_cases.json",
       "scripts/validate_skill.py",
       "install and README verification",
@@ -221,7 +231,7 @@
       "local, PR, and published release readiness checked by executable gates",
       "manifest, Skill IR, trigger report, remote version, and release evidence remain consistent",
       "bundled publisher forbids direct default-branch push and released-version reuse",
-      "README, MIT LICENSE, bundled Qiaomu profile, PR discussion/check state, Release, discovery and clean install are verified"
+      "README, MIT LICENSE, owner-scoped profile policy, PR discussion/check state, Release, discovery and clean install are verified"
     ]
   },
   "evidence_boundary": {

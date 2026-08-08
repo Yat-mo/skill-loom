@@ -9,7 +9,7 @@ import os
 import random
 import sys
 import time
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from http.client import IncompleteRead, RemoteDisconnected
 from pathlib import Path
 from typing import Any
@@ -32,7 +32,7 @@ def github_parts(url: str) -> tuple[str, str]:
 
 def iso_timestamp(value: Any) -> str | None:
     try:
-        return datetime.fromtimestamp(int(value), tz=UTC).isoformat()
+        return datetime.fromtimestamp(int(value), tz=timezone.utc).isoformat()
     except (TypeError, ValueError, OSError):
         return None
 

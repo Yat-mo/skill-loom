@@ -13,7 +13,9 @@ ACTIVE_DOCS = (
     ROOT / "README.md",
     ROOT / "references" / "prior-art-research.md",
     ROOT / "references" / "skill-engineering-method.md",
+    ROOT / "references" / "progressive-skill-architecture.md",
     ROOT / "agents" / "interface.yaml",
+    ROOT / "agents" / "openai.yaml",
 )
 FORBIDDEN = (
     ".agents/skills/find-skills/SKILL.md",
@@ -41,6 +43,12 @@ class BuiltInDiscoveryTest(unittest.TestCase):
         self.assertIn("scripts/publish_skill.py", skill_text)
         self.assertTrue((ROOT / "scripts" / "publish_skill.py").is_file())
         self.assertNotIn("qiaomu-skill-publisher/scripts/publish_skill.py", skill_text)
+
+    def test_codex_adapter_and_progressive_architecture_are_bundled(self) -> None:
+        self.assertTrue((ROOT / "agents" / "openai.yaml").is_file())
+        architecture = (ROOT / "references" / "progressive-skill-architecture.md").read_text(encoding="utf-8")
+        for phrase in ("Structure serves content", "Activation beats storage", "Task anchor", "route reachability"):
+            self.assertIn(phrase.lower(), architecture.lower())
 
 
 if __name__ == "__main__":
