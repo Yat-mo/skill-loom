@@ -4,7 +4,7 @@ description: |
   Research, create, improve, migrate, evaluate, package, install-check, govern, and safely publish Qiaomu-based reusable agent skills from project rules, workflows, prompts, transcripts, docs, SOPs, runbooks, scripts, or notes. Use for new or existing skills, project skill architecture, progressive disclosure, routing/trigger boundaries, prior-art synthesis, trigger or output evals, Skill IR, release gates, GitHub repository and pull-request publication, versioned Releases, clean npx installation, team reuse, and create-and-publish flows. The publication path is self-contained and forbids direct default-branch pushes. Exclude one-off summaries, translations, ordinary docs, non-skill package publishing, and tasks that explicitly should not become a skill.
 metadata:
   author: Yat-mo fork, based on Qiaomu
-  version: "2.9.0"
+  version: "2.9.1"
   upstream_inspiration: yaojingang/yao-meta-skill; joeseesun/qiaomu-skill-publisher; WoJiSama/skill-based-architecture
 ---
 

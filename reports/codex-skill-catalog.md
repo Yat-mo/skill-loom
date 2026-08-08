@@ -44,9 +44,30 @@
 
 Total deduplicated cases: 28. Public repository status was rechecked through GitHub CLI on 2026-08-04. A local package is not described as publicly installable.
 
+#### Public repository links
+
+- https://github.com/joeseesun/qiaomu-meta-skill
+- https://github.com/joeseesun/qiaomu-ai-access
+- https://github.com/joeseesun/qiaomu-ai-prd
+- https://github.com/joeseesun/qiaomu-bento-ppt
+- https://github.com/joeseesun/qiaomu-book-script
+- https://github.com/joeseesun/qiaomu-campus-resume
+- https://github.com/joeseesun/qiaomu-course-designer
+- https://github.com/joeseesun/qiaomu-cover-designer
+- https://github.com/joeseesun/qiaomu-drama-generator
+- https://github.com/joeseesun/qiaomu-goal-meta-skill
+- https://github.com/joeseesun/qiaomu-model-cli
+- https://github.com/joeseesun/qiaomu-music-publisher
+- https://github.com/joeseesun/qiaomu-ppt
+- https://github.com/joeseesun/qiaomu-read-helper
+- https://github.com/joeseesun/qiaomu-seo
+- https://github.com/joeseesun/qiaomu-wx-video
+- https://github.com/joeseesun/qiaomu-xinzhiyuan-title
+- https://github.com/joeseesun/qiaomu-youtube-download
+
 ## Dated prior-art candidates
 
-The public README contains the representative subset most useful to a new user. Full candidate lessons remain in the target package's own `reports/prior-art-research.md`.
+The public README now stays product-focused. Historical cases remain in this catalog, while full candidate lessons remain in the target package's own `reports/prior-art-research.md`.
 
 ### Meta authoring and evaluation
 
