@@ -38,8 +38,9 @@ class CodexSkillCatalogTest(unittest.TestCase):
             "### Local, private, or not publicly released", maxsplit=1
         )[0]
         for name in numbered_names(public_block):
+            owner = "Yat-mo" if name == "skill-loom" else "joeseesun"
             self.assertIn(
-                f"https://github.com/joeseesun/{name}",
+                f"https://github.com/{owner}/{name}",
                 self.catalog,
                 f"catalog lacks public repository link for {name}",
             )

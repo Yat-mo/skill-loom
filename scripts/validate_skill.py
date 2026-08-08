@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the lightweight Qiaomu skill package contract."""
+"""Validate the lightweight Skill Loom package contract."""
 
 from __future__ import annotations
 
@@ -156,7 +156,7 @@ def validate(root: Path) -> dict[str, Any]:
         if not (root / rel).exists():
             failures.append(f"missing required file: {rel}")
 
-    if root.name == "qiaomu-meta-skill":
+    if root.name == "skill-loom":
         for rel in ("SKILL.md", "README.md", "references/prior-art-research.md"):
             path = root / rel
             if not path.exists():
@@ -167,7 +167,7 @@ def validate(root: Path) -> dict[str, Any]:
                     failures.append(f"{rel} contains external discovery-skill dependency: {forbidden}")
         for relative in ("scripts/research_prior_art.py", "scripts/release_check.py", "scripts/publish_skill.py"):
             if not (root / relative).is_file():
-                failures.append(f"qiaomu-meta-skill missing built-in factory script: {relative}")
+                failures.append(f"skill-loom missing built-in factory script: {relative}")
 
     skill_entrypoints = discover_skill_entrypoints(root)
     nested_entrypoints = [path for path in skill_entrypoints if path != Path("SKILL.md")]
@@ -187,8 +187,8 @@ def validate(root: Path) -> dict[str, Any]:
             if not frontmatter.get(field):
                 failures.append(f"SKILL.md missing frontmatter field: {field}")
         description = str(frontmatter.get("description", ""))
-        if frontmatter.get("name") == "qiaomu-meta-skill":
-            for token in ("skill", "qiaomu", "workflow"):
+        if frontmatter.get("name") == "skill-loom":
+            for token in ("skill", "workflow", "publish"):
                 if token not in description.lower():
                     warnings.append(f"description may be missing routing token: {token}")
         for rel in markdown_links(skill_text):
@@ -295,7 +295,7 @@ def validate(root: Path) -> dict[str, Any]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Validate a Qiaomu skill package.")
+    parser = argparse.ArgumentParser(description="Validate a Skill Loom package.")
     parser.add_argument("skill_dir", nargs="?", default=".", help="Skill directory to validate.")
     args = parser.parse_args()
 

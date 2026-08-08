@@ -1,6 +1,6 @@
 {
-  "name": "qiaomu-meta-skill",
-  "version": "2.9.1",
+  "name": "skill-loom",
+  "version": "3.0.0",
   "owner": "Yat-mo",
   "updated_at": "2026-08-08",
   "status": "active",
@@ -10,7 +10,7 @@
   "review_cadence": "quarterly",
   "upstream_inspiration": "https://github.com/joeseesun/qiaomu-meta-skill; https://github.com/yaojingang/yao-meta-skill; https://github.com/joeseesun/qiaomu-skill-publisher; https://github.com/WoJiSama/skill-based-architecture",
   "fork": {
-    "repository": "https://github.com/Yat-mo/qiaomu-meta-skill",
+    "repository": "https://github.com/Yat-mo/skill-loom",
     "base_repository": "https://github.com/joeseesun/qiaomu-meta-skill",
     "base_commit": "9d9eafe012e327258228186b5e816534c2951333",
     "policy": "track upstream; keep Yat-mo-specific routing, ownership, Codex adapter, and architecture gates as reviewed patches"
@@ -21,8 +21,8 @@
     "reviewed_through_commit_date": "2026-07-16",
     "policy": "semantic adoption; do not mirror upstream wholesale"
   },
-  "qiaomu_defaults": {
-    "skill_name_prefix": "optional-qiaomu-branding",
+  "skill_loom_defaults": {
+    "skill_name_prefix": "optional-explicit-branding",
     "max_preferred_hyphen_parts": 3,
     "owner_policy": "manifest owner is required; never infer Qiaomu ownership for third-party packages",
     "upstream_credit": "https://github.com/joeseesun/qiaomu-meta-skill"

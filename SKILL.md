@@ -1,29 +1,29 @@
 ---
-name: qiaomu-meta-skill
+name: skill-loom
 description: |
-  Research, create, improve, migrate, evaluate, package, install-check, govern, and safely publish Qiaomu-based reusable agent skills from project rules, workflows, prompts, transcripts, docs, SOPs, runbooks, scripts, or notes. Use for new or existing skills, project skill architecture, progressive disclosure, routing/trigger boundaries, prior-art synthesis, trigger or output evals, Skill IR, release gates, GitHub repository and pull-request publication, versioned Releases, clean npx installation, team reuse, and create-and-publish flows. The publication path is self-contained and forbids direct default-branch pushes. Exclude one-off summaries, translations, ordinary docs, non-skill package publishing, and tasks that explicitly should not become a skill.
+  Research, create, improve, migrate, evaluate, package, install-check, govern, and safely publish reusable agent skills from project rules, workflows, prompts, transcripts, docs, SOPs, runbooks, scripts, or notes. Use Skill Loom for new or existing skills, project skill architecture, progressive disclosure, routing and trigger boundaries, prior-art synthesis, trigger or output evals, Skill IR, release gates, GitHub repository and pull-request publication, versioned Releases, clean npx installation, team reuse, and create-and-publish flows. Formerly qiaomu-meta-skill; activate for legacy requests using that name. The publication path is self-contained and forbids direct default-branch pushes. Exclude one-off summaries, translations, ordinary docs, non-skill package publishing, and tasks that explicitly should not become a skill.
 metadata:
-  author: Yat-mo fork, based on Qiaomu
-  version: "2.9.1"
-  upstream_inspiration: yaojingang/yao-meta-skill; joeseesun/qiaomu-skill-publisher; WoJiSama/skill-based-architecture
+  author: Yat-mo
+  version: "3.0.0"
+  upstream_inspiration: joeseesun/qiaomu-meta-skill; yaojingang/yao-meta-skill; joeseesun/qiaomu-skill-publisher; WoJiSama/skill-based-architecture
 ---
 
-# Qiaomu Meta Skill
+# Skill Loom
 
-Build reusable Qiaomu skill packages, not long prompts.
+Turn repeatable work into reusable, evidence-backed agent skills—not long prompts.
 
 ## Router Rules
 
 - Route by frontmatter `description` first.
-- Once selected, `qiaomu-meta-skill` is the single authoring authority. Do not also invoke a generic `skill-creator` unless the user explicitly requests comparison or this skill is unavailable.
+- Once selected, `skill-loom` is the single authoring authority. Do not also invoke a generic `skill-creator` unless the user explicitly requests comparison or this skill is unavailable.
 - Built-in prior-art discovery belongs to this skill. Do not install, load, or delegate to a separate discovery skill.
 - Built-in GitHub publishing belongs to this skill. Do not require or invoke a separate publisher skill after this package is selected.
 - Keep the package root `SKILL.md` to routing and the minimal workflow. Put judgment in `references/`, deterministic behavior in `scripts/`, regression cases in `evals/`, and evidence in `reports/`.
 - A package has one discoverable root `SKILL.md`; embedded examples and fixtures use `SKILL.example.md` or `SKILL.fixture.md`.
 - Do not turn one-off summaries, translations, explanations, or brainstorming into skills.
 - Match the user's action: create/refactor/package requests may edit; audit/evaluate/diagnose-only requests remain read-only; publish only when explicitly requested.
-- Prefer concise Chinese-first names with no more than three meaningful hyphen parts. Use the `qiaomu-` prefix only when the user wants Qiaomu branding.
-- Require an explicit owner for publishable skills. Never assign Qiaomu authorship, profile assets, or copyright to another person's package by default.
+- Prefer concise Chinese-first names with no more than three meaningful hyphen parts. Add a brand prefix only when the user explicitly wants it.
+- Require an explicit owner for publishable skills. Never assign another creator's authorship, profile assets, or copyright to a package by default.
 - For project-rule architecture, multi-workflow routing, cross-harness adapters, or self-maintenance, read [Progressive Skill Architecture](references/progressive-skill-architecture.md). Apply its mechanisms proportionally, not as a mandatory full scaffold.
 
 ## Modes
@@ -73,7 +73,7 @@ Before promoting one failure into a core rule:
 
 Prefer intent fidelity, source fidelity, and decision rules over an expanding topic encyclopedia.
 
-## Qiaomu Skill OS
+## Skill Loom Pipeline
 
 1. `Intent`: recurring job, users, inputs, output, exclusions, standards, references.
 2. `Skill IR`: platform-neutral meaning and evidence boundary.
@@ -144,7 +144,7 @@ The final creation handoff must name the **reference skills studied**, give **ca
 
 Detailed CLI and safety decisions: [Self-Contained Skill Publishing](references/publishing.md). README method: [GitHub README Playbook](references/github-readme-playbook.md). Operation method: [SkillOps Loop](references/skillops-loop.md).
 
-## Qiaomu Defaults
+## Skill Loom Defaults
 
 - Prefer practical, concise, publishable Chinese output.
 - Keep one creator authority and one root skill entrypoint.

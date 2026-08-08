@@ -1,4 +1,4 @@
 interface:
-  display_name: "Qiaomu Meta Skill — Yat-mo Fork"
+  display_name: "Skill Loom"
   short_description: "Create, improve, evaluate, and publish skills with proportional architecture and evidence gates"
-  default_prompt: "Use $qiaomu-meta-skill as the single skill-authoring authority. Build the smallest structure the recurring job earns, test trigger and route boundaries, preserve explicit ownership and attribution, and publish only through validated feature-branch and PR gates when requested."
+  default_prompt: "Use $skill-loom as the single skill-authoring authority. Build the smallest structure the recurring job earns, test trigger and route boundaries, preserve explicit ownership and attribution, and publish only through validated feature-branch and PR gates when requested."

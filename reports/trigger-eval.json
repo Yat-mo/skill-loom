@@ -3,8 +3,8 @@
   "threshold": 0.34,
   "description_concepts": [
     "authoring_action",
+    "brand",
     "eval_release",
-    "qiaomu",
     "skill",
     "source_material"
   ],
@@ -20,7 +20,7 @@
   "results": {
     "should_trigger": [
       {
-        "prompt": "把这个流程整理成一个 qiaomu skill",
+        "prompt": "用 Skill Loom 把这个流程整理成可重用的 skill",
         "family": "cn_workflow_to_skill",
         "expected_trigger": true,
         "predicted_trigger": true,
@@ -28,14 +28,14 @@
         "score": 0.8,
         "matched_concepts": [
           "authoring_action",
-          "qiaomu",
+          "brand",
           "skill",
           "source_material"
         ],
         "negative_pattern": null
       },
       {
-        "prompt": "基于这个开源 skill 优化升级乔木 meta skill",
+        "prompt": "基于这个开源 skill 优化升级 Skill Loom",
         "family": "cn_upgrade_existing",
         "expected_trigger": true,
         "predicted_trigger": true,
@@ -43,7 +43,7 @@
         "score": 0.6,
         "matched_concepts": [
           "authoring_action",
-          "qiaomu",
+          "brand",
           "skill"
         ],
         "negative_pattern": null
@@ -77,7 +77,7 @@
         "negative_pattern": null
       },
       {
-        "prompt": "Create a skill from this repeated workflow and package it for Qiaomu team reuse.",
+        "prompt": "Create a skill from this repeated workflow and package it for team reuse with Skill Loom.",
         "family": "en_workflow_to_skill",
         "expected_trigger": true,
         "predicted_trigger": true,
@@ -85,7 +85,7 @@
         "score": 0.8,
         "matched_concepts": [
           "authoring_action",
-          "qiaomu",
+          "brand",
           "skill",
           "source_material"
         ],
@@ -106,7 +106,7 @@
         "negative_pattern": null
       },
       {
-        "prompt": "先搜索 skill 目录，找安装量最高、口碑证据强的相关能力，学习后创建一个更好的 qiaomu skill",
+        "prompt": "先搜索 skill 目录，找证据强的相关能力，再用 Skill Loom 创建一个更好的 skill",
         "family": "cn_prior_art_synthesis",
         "expected_trigger": true,
         "predicted_trigger": true,
@@ -114,20 +114,21 @@
         "score": 0.6,
         "matched_concepts": [
           "authoring_action",
-          "qiaomu",
+          "brand",
           "skill"
         ],
         "negative_pattern": null
       },
       {
-        "prompt": "Research the strongest existing agent skills, then synthesize an original Qiaomu skill without copying them.",
+        "prompt": "Research the strongest existing agent skills, then use Skill Loom to synthesize an original skill without copying them.",
         "family": "en_prior_art_synthesis",
         "expected_trigger": true,
         "predicted_trigger": true,
         "passed": true,
-        "score": 0.4,
+        "score": 0.6,
         "matched_concepts": [
-          "qiaomu",
+          "authoring_action",
+          "brand",
           "skill"
         ],
         "negative_pattern": null
@@ -146,15 +147,15 @@
         "negative_pattern": null
       },
       {
-        "prompt": "审计这个 qiaomu skill 的路由边界和输出评估，只给发现和修复建议，先不要改文件",
+        "prompt": "用 Skill Loom 审计这个 skill 的路由边界和输出评估，只给建议，先不要改文件",
         "family": "cn_audit_only",
         "expected_trigger": true,
         "predicted_trigger": true,
         "passed": true,
         "score": 0.6,
         "matched_concepts": [
+          "brand",
           "eval_release",
-          "qiaomu",
           "skill"
         ],
         "negative_pattern": null
@@ -173,7 +174,7 @@
         "negative_pattern": null
       },
       {
-        "prompt": "把这个 qiaomu skill 发布到 GitHub，并完成 PR、Release 和干净安装验证",
+        "prompt": "用 Skill Loom 把这个 skill 发布到 GitHub，并完成 PR、Release 和干净安装验证",
         "family": "cn_full_publish",
         "expected_trigger": true,
         "predicted_trigger": true,
@@ -181,14 +182,14 @@
         "score": 0.8,
         "matched_concepts": [
           "authoring_action",
+          "brand",
           "eval_release",
-          "qiaomu",
           "skill"
         ],
         "negative_pattern": null
       },
       {
-        "prompt": "先 dry-run 检查这个乔木 skill 的 README、Profile、版本和发布条件，不要写 GitHub",
+        "prompt": "先用 Skill Loom dry-run 检查这个 skill 的 README、版本和发布条件，不要写 GitHub",
         "family": "cn_publish_dry_run",
         "expected_trigger": true,
         "predicted_trigger": true,
@@ -196,14 +197,14 @@
         "score": 0.8,
         "matched_concepts": [
           "authoring_action",
+          "brand",
           "eval_release",
-          "qiaomu",
           "skill"
         ],
         "negative_pattern": null
       },
       {
-        "prompt": "把这个 qiaomu skill 直接推 main 发布，如果不安全就改成规范 PR 流程",
+        "prompt": "用 Skill Loom 发布这个 skill；如果直推 main 不安全就改成规范 PR 流程",
         "family": "cn_unsafe_publish_correction",
         "expected_trigger": true,
         "predicted_trigger": true,
@@ -211,8 +212,8 @@
         "score": 1.0,
         "matched_concepts": [
           "authoring_action",
+          "brand",
           "eval_release",
-          "qiaomu",
           "skill",
           "source_material"
         ],
@@ -227,7 +228,7 @@
         "score": 0.8,
         "matched_concepts": [
           "authoring_action",
-          "qiaomu",
+          "brand",
           "skill",
           "source_material"
         ],

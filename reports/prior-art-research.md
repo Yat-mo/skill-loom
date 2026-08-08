@@ -51,7 +51,7 @@ Source-level integration, trigger tests, route checks, package validation, and c
 
 - Researched at: 2026-08-04
 - Reference: [`joeseesun/qiaomu-skill-publisher`](https://github.com/joeseesun/qiaomu-skill-publisher) at `8bd944b7723e710d38f9fa4034e8ba6addbbdfed`
-- Scope: absorb its useful publishing behavior into `qiaomu-meta-skill` so creation and publication no longer require a second skill
+- Scope: absorb its useful publishing behavior into the current meta-skill package so creation and publication no longer require a second skill
 - License: MIT
 
 ### Keep
@@ -65,7 +65,7 @@ Source-level integration, trigger tests, route checks, package validation, and c
 
 ### Adapt
 
-- Profile assets now come from `qiaomu-meta-skill/assets/qiaomu-profile`, removing the runtime dependency on a separate `qiaomu-profile` skill.
+- Profile assets now come from the package's `assets/qiaomu-profile`, removing the runtime dependency on a separate `qiaomu-profile` skill.
 - README validation combines publisher placeholders with the meta validator's product-page, upstream-credit and evidence requirements.
 - Repository creation uses an initial baseline followed by feature-branch PR publication, including for brand-new repositories.
 - Local synchronization moves an existing target to `~/.agents/skill-backups` before replacement, outside recursive skill discovery.
@@ -91,7 +91,7 @@ Source-level integration, trigger tests, route checks, package validation, and c
 The integration can validate packaging and publication mechanics. It cannot establish domain output quality, user adoption or business outcomes. Those remain separate output/runtime/human evidence or `missing evidence`.
 
 - Researched at: 2026-07-30
-- Scope: improve `qiaomu-meta-skill` with a repeatable discover-compare-synthesize gate
+- Scope: improve the meta-skill package with a repeatable discover-compare-synthesize gate
 - Queries: `skill creator`, `skill evaluation`, `meta skill`, `create agent skills`
 - Discovery method at research time: skills.sh via the Skills CLI plus direct source review. SkillsMP was added to the built-in method on 2026-08-03 and did not contribute to this historical shortlist.
 - Rating evidence: unavailable. The public skills.sh ranking and API expose install telemetry, not user star ratings or written reviews.
