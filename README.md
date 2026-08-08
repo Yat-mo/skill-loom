@@ -2,13 +2,13 @@
 
 > 把一句「把这个流程做成 Skill」，变成一个真正能被发现、能稳定触发、能通过验证、还能一键开源的 Skill。
 
-[![GitHub Release](https://img.shields.io/github/v/release/joeseesun/qiaomu-meta-skill?display_name=tag&sort=semver)](https://github.com/joeseesun/qiaomu-meta-skill/releases)
-[![Stars](https://img.shields.io/github/stars/joeseesun/qiaomu-meta-skill?style=flat)](https://github.com/joeseesun/qiaomu-meta-skill/stargazers)
-[![Last commit](https://img.shields.io/github/last-commit/joeseesun/qiaomu-meta-skill)](https://github.com/joeseesun/qiaomu-meta-skill/commits/main)
-[![License](https://img.shields.io/github/license/joeseesun/qiaomu-meta-skill)](LICENSE)
+[![GitHub Release](https://img.shields.io/github/v/release/Yat-mo/qiaomu-meta-skill?display_name=tag&sort=semver)](https://github.com/Yat-mo/qiaomu-meta-skill/releases)
+[![Stars](https://img.shields.io/github/stars/Yat-mo/qiaomu-meta-skill?style=flat)](https://github.com/Yat-mo/qiaomu-meta-skill/stargazers)
+[![Last commit](https://img.shields.io/github/last-commit/Yat-mo/qiaomu-meta-skill)](https://github.com/Yat-mo/qiaomu-meta-skill/commits/main)
+[![License](https://img.shields.io/github/license/Yat-mo/qiaomu-meta-skill)](LICENSE)
 
 ```bash
-npx skills add joeseesun/qiaomu-meta-skill
+npx skills add Yat-mo/qiaomu-meta-skill
 ```
 
 安装以后，你只需要把提示词、SOP、聊天记录、旧 Skill、脚本或一个模糊想法交给 Agent：
@@ -20,7 +20,7 @@ npx skills add joeseesun/qiaomu-meta-skill
 
 它会自己完成：**需求收敛 → 同类检索 → 取长避短 → Skill 设计 → 触发评测 → 格式校验 → README → API 泄露检查 → PR → Release → npx 安装验证**。
 
-**v2.8.1 本地候选已验证：** 35/35 单元测试、23/23 触发评测、0 个包校验问题。公开发布证据以 [Releases](https://github.com/joeseesun/qiaomu-meta-skill/releases) 为准。
+**v2.9.0 Yat-mo Fork 本地候选已验证：** 38/38 单元测试、27/27 触发评测、0 个包校验问题；双目录先例研究完成 2 组查询、51 个去重候选家族。公开发布证据以 [Releases](https://github.com/Yat-mo/qiaomu-meta-skill/releases) 为准。
 
 ## 为什么我做了这个
 
@@ -47,7 +47,9 @@ Anthropic 与 OpenAI 的官方 `skill-creator` 奠定了很好的基础。乔木
 | 测试该触发与不该触发的真实说法 | 视实现而定 | ✓ |
 | 区分设计优势、已验证优势和待验证假设 |  | ✓ |
 | 校验目录、版本、上下文预算与递归发现 |  | ✓ |
-| README、MIT License、乔木 Profile 自动准备 |  | ✓ |
+| README、MIT License、按所有权决定的 Profile 准备 |  | ✓ |
+| 单文件／轻量目录／完整架构的渐进选择 |  | ✓ |
+| Codex `agents/openai.yaml` 适配与验证 |  | ✓ |
 | Secret / API 泄露扫描 |  | ✓ |
 | 功能分支、PR、检查、Release |  | ✓ |
 | `npx skills add` 公开发现与隔离安装验证 |  | ✓ |
@@ -79,7 +81,7 @@ Anthropic 与 OpenAI 的官方 `skill-creator` 奠定了很好的基础。乔木
 | [`qiaomu-youtube-download`](https://github.com/joeseesun/qiaomu-youtube-download) | 搜索、下载并验证 YouTube 视频、音频、字幕与元数据 |
 | [`qiaomu-wx-video`](https://github.com/joeseesun/qiaomu-wx-video) | 下载并验证微信视频号视频或直播回放 |
 | [`qiaomu-music-publisher`](https://github.com/joeseesun/qiaomu-music-publisher) | 从 Suno 下载歌曲、歌词和封面并完成音乐发布工作流 |
-| [`qiaomu-meta-skill`](https://github.com/joeseesun/qiaomu-meta-skill) | 元 Skill 自己也持续用同一套研究、评测和发布门禁迭代 |
+| [`qiaomu-meta-skill`](https://github.com/Yat-mo/qiaomu-meta-skill) | Yat-mo Fork 在上游门禁上增加渐进式架构与 Codex 适配 |
 
 <details>
 <summary><strong>另外 10 个本地或未公开案例</strong></summary>
@@ -178,6 +180,7 @@ your-skill/
 ├── LICENSE                     # 默认 MIT
 ├── manifest.json               # 版本、作者、平台与门禁
 ├── agents/interface.yaml       # 跨 Agent 接口
+├── agents/openai.yaml          # OpenAI / Codex 接口
 ├── references/                 # 长方法、判断与安全边界
 ├── scripts/                    # 可重复验证与确定性工具
 ├── evals/trigger_cases.json    # 应触发、不应触发、近邻场景
@@ -199,13 +202,13 @@ your-skill/
 ## 安装与验证
 
 ```bash
-npx skills add joeseesun/qiaomu-meta-skill
+npx skills add Yat-mo/qiaomu-meta-skill
 ```
 
 只安装这个 Skill：
 
 ```bash
-npx skills add joeseesun/qiaomu-meta-skill --skill qiaomu-meta-skill
+npx skills add Yat-mo/qiaomu-meta-skill --skill qiaomu-meta-skill
 ```
 
 验证：
@@ -294,17 +297,24 @@ Skill 不应该是一套不可修改的“标准答案”。它更像把个人�
 
 建议先安装、跑一个真实任务，然后 fork：删除不属于你的规则，加入你自己的判断、工具、风格、评测与发布边界。一个越来越像你的 Skill，才真正符合 Skill 的理念。
 
+本 Fork 正是按这个原则维护：保留乔木上游的单一创建权威、先例研究、评测和安全发布；融合
+[`WoJiSama/skill-based-architecture`](https://github.com/WoJiSama/skill-based-architecture)
+的渐进结构、激活优先、原则加检验句、新任务重走路由和失败驱动学习。详细取舍见
+[`references/progressive-skill-architecture.md`](references/progressive-skill-architecture.md)。
+
 ## 致谢与来源
 
 - [`yaojingang/yao-meta-skill`](https://github.com/yaojingang/yao-meta-skill)：Skill IR、评测证据、Review、信任边界与 SkillOps 方法。
 - [`anthropics/skills`](https://github.com/anthropics/skills)：Skill 创建、迭代与真实评测实践。
 - [`openai/skills`](https://github.com/openai/skills)：渐进披露、自由度与可验证的 Skill 打包方法。
 - [`joeseesun/qiaomu-skill-publisher`](https://github.com/joeseesun/qiaomu-skill-publisher)：README、Profile、License 与安装验证；其能力现已安全内建。
+- [`joeseesun/qiaomu-meta-skill`](https://github.com/joeseesun/qiaomu-meta-skill)：本 Fork 的直接上游，保留原作者署名与 MIT License。
+- [`WoJiSama/skill-based-architecture`](https://github.com/WoJiSama/skill-based-architecture)：渐进式项目 Skill 架构、路由激活、任务锚点与维护闭环。
 - skills.sh、SkillsMP 与所有在 prior-art 报告中被研究的开源作者。
 
 上游思想以语义方式吸收并保留归因，不整库镜像，不复制许可证不明的正文，也不把搜索热度冒充质量。
 
-Upstream inspiration: https://github.com/yaojingang/yao-meta-skill; https://github.com/joeseesun/qiaomu-skill-publisher
+Upstream inspiration: https://github.com/joeseesun/qiaomu-meta-skill; https://github.com/yaojingang/yao-meta-skill; https://github.com/joeseesun/qiaomu-skill-publisher; https://github.com/WoJiSama/skill-based-architecture
 
 ## 安全与证据边界
 
@@ -344,7 +354,7 @@ Upstream inspiration: https://github.com/yaojingang/yao-meta-skill; https://gith
 Unlike a one-shot `SKILL.md` generator, it includes dual-catalog prior-art research, GitHub source verification, trigger evaluation, evidence-aware release gates, secret scanning, pull-request publication, versioned Releases, and clean `npx` installation verification.
 
 ```bash
-npx skills add joeseesun/qiaomu-meta-skill
+npx skills add Yat-mo/qiaomu-meta-skill
 ```
 
 Try saying:

@@ -234,6 +234,14 @@ def validate(root: Path) -> dict[str, Any]:
             if isinstance(targets, list) and expected not in targets:
                 warnings.append(f"adapter target not declared: {expected}")
 
+    openai_path = root / "agents" / "openai.yaml"
+    if openai_path.exists():
+        openai = load_yaml(openai_path)
+        openai_meta = openai.get("interface", {}) if isinstance(openai, dict) else {}
+        for field in REQUIRED_INTERFACE_FIELDS:
+            if not openai_meta.get(field):
+                failures.append(f"agents/openai.yaml missing interface.{field}")
+
     manifest_path = root / "manifest.json"
     if manifest_path.exists():
         try:
@@ -248,6 +256,9 @@ def validate(root: Path) -> dict[str, Any]:
             failures.append("manifest.json version must be semver-like")
         if "release_gates" not in manifest:
             warnings.append("manifest.json missing release_gates")
+        targets = manifest.get("target_platforms", [])
+        if isinstance(targets, list) and "openai" in targets and not openai_path.is_file():
+            failures.append("OpenAI target requires agents/openai.yaml")
         if manifest.get("context_budget_tier") == "production" and skill_bytes > MAX_PRODUCTION_SKILL_BYTES:
             warnings.append(
                 f"SKILL.md exceeds production context budget: {skill_bytes} > {MAX_PRODUCTION_SKILL_BYTES} bytes"

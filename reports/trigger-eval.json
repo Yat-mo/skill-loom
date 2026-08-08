@@ -10,8 +10,8 @@
   ],
   "missing_description_concepts": [],
   "summary": {
-    "total": 23,
-    "passed": 23,
+    "total": 27,
+    "passed": 27,
     "false_positive": 0,
     "false_negative": 0,
     "pass_rate": 1.0
@@ -217,6 +217,35 @@
           "source_material"
         ],
         "negative_pattern": null
+      },
+      {
+        "prompt": "把这篇文章的 skill 架构理念融合进 qiaomu meta skill，并按需要加入路由和验证",
+        "family": "cn_architecture_integration",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.8,
+        "matched_concepts": [
+          "authoring_action",
+          "qiaomu",
+          "skill",
+          "source_material"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "把项目规则整理成可路由、可维护、能在 Codex 使用的 agent skill",
+        "family": "cn_project_rules_architecture",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.6,
+        "matched_concepts": [
+          "authoring_action",
+          "skill",
+          "source_material"
+        ],
+        "negative_pattern": null
       }
     ],
     "should_not_trigger": [
@@ -238,8 +267,10 @@
         "expected_trigger": false,
         "predicted_trigger": false,
         "passed": true,
-        "score": 0.0,
-        "matched_concepts": [],
+        "score": 0.2,
+        "matched_concepts": [
+          "source_material"
+        ],
         "negative_pattern": "翻译一下"
       },
       {
@@ -286,6 +317,20 @@
           "eval_release"
         ],
         "negative_pattern": "普通 Python 包"
+      },
+      {
+        "prompt": "只解释这篇 skill 架构文章，不要创建或修改 skill",
+        "family": "architecture_explain_only",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.6,
+        "matched_concepts": [
+          "authoring_action",
+          "skill",
+          "source_material"
+        ],
+        "negative_pattern": "只解释"
       }
     ],
     "near_neighbor": [
@@ -325,6 +370,19 @@
           "source_material"
         ],
         "negative_pattern": null
+      },
+      {
+        "prompt": "帮我整理 AGENTS.md，但不要把它做成 skill",
+        "family": "agents_doc_only",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.4,
+        "matched_concepts": [
+          "authoring_action",
+          "skill"
+        ],
+        "negative_pattern": "不要把它做成 skill"
       }
     ]
   }

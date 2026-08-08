@@ -73,6 +73,21 @@ class PublishSkillTest(unittest.TestCase):
             (root / "README.md").write_text(text, encoding="utf-8")
             self.assertEqual(PUBLISH.check_readme(root, upstream, require_profile=False), [])
             self.assertIn("validate_skill.py", text)
+            self.assertIn("Copyright (c) 向阳乔木", text)
+
+    def test_identity_requires_explicit_owner(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "SKILL.md").write_text(
+                "---\nname: qiaomu-demo\ndescription: |\n  Build a reusable skill.\n---\n",
+                encoding="utf-8",
+            )
+            (root / "manifest.json").write_text(
+                json.dumps({"name": "qiaomu-demo", "version": "1.0.0"}),
+                encoding="utf-8",
+            )
+            with self.assertRaisesRegex(PUBLISH.PublishError, "owner is required"):
+                PUBLISH.identity(root)
 
     def test_default_branch_push_is_rejected(self) -> None:
         for branch in ("", "main", "master"):
@@ -143,6 +158,41 @@ class PublishSkillTest(unittest.TestCase):
             self.assertFalse((root / "LICENSE").exists())
             self.assertFalse((root / "README.md").exists())
             self.assertEqual(result["default_branch_push"], "forbidden")
+
+    def test_non_qiaomu_owner_does_not_receive_qiaomu_profile(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "SKILL.md").write_text(
+                "---\nname: yatmo-demo\ndescription: |\n  Build a reusable skill package.\n---\n",
+                encoding="utf-8",
+            )
+            (root / "manifest.json").write_text(
+                json.dumps(
+                    {
+                        "name": "yatmo-demo",
+                        "version": "1.0.0",
+                        "owner": "Yat-mo",
+                        "upstream_inspiration": "https://github.com/example/upstream",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            args = argparse.Namespace(
+                skill_dir=str(root),
+                github_user=None,
+                repo_name=None,
+                branch=None,
+                private=False,
+                dry_run=True,
+                prepare_only=False,
+                verify_only=False,
+                no_merge=False,
+                no_sync_local=True,
+                skip_qiaomu_profile=False,
+            )
+            result = PUBLISH.publish(args, FakeRunner())
+            self.assertTrue(result["ok"])
+            self.assertNotIn("README.md profile block", result["would_change"])
 
     def test_profile_assets_are_bundled(self) -> None:
         for name in PUBLISH.PROFILE_ASSETS:

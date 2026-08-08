@@ -1,14 +1,20 @@
 {
   "name": "qiaomu-meta-skill",
-  "version": "2.8.1",
-  "owner": "Qiaomu",
-  "updated_at": "2026-08-04",
+  "version": "2.9.0",
+  "owner": "Yat-mo",
+  "updated_at": "2026-08-08",
   "status": "active",
   "maturity_tier": "governed",
   "lifecycle_stage": "library",
   "context_budget_tier": "production",
   "review_cadence": "quarterly",
-  "upstream_inspiration": "https://github.com/yaojingang/yao-meta-skill; https://github.com/joeseesun/qiaomu-skill-publisher",
+  "upstream_inspiration": "https://github.com/joeseesun/qiaomu-meta-skill; https://github.com/yaojingang/yao-meta-skill; https://github.com/joeseesun/qiaomu-skill-publisher; https://github.com/WoJiSama/skill-based-architecture",
+  "fork": {
+    "repository": "https://github.com/Yat-mo/qiaomu-meta-skill",
+    "base_repository": "https://github.com/joeseesun/qiaomu-meta-skill",
+    "base_commit": "9d9eafe012e327258228186b5e816534c2951333",
+    "policy": "track upstream; keep Yat-mo-specific routing, ownership, Codex adapter, and architecture gates as reviewed patches"
+  },
   "upstream_sync": {
     "reviewed_commit": "e15472e1f5dc96f79ea0259bf9fdf67598cea356",
     "reviewed_at": "2026-07-31",
@@ -16,11 +22,10 @@
     "policy": "semantic adoption; do not mirror upstream wholesale"
   },
   "qiaomu_defaults": {
-    "skill_name_prefix": "qiaomu-",
+    "skill_name_prefix": "optional-qiaomu-branding",
     "max_preferred_hyphen_parts": 3,
-    "copyright": "Copyright (c) 向阳乔木",
-    "x": "https://x.com/vista8",
-    "github": "https://github.com/joeseesun/"
+    "owner_policy": "manifest owner is required; never infer Qiaomu ownership for third-party packages",
+    "upstream_credit": "https://github.com/joeseesun/qiaomu-meta-skill"
   },
   "target_platforms": [
     "openai",
@@ -30,6 +35,7 @@
     "vscode"
   ],
   "factory_components": [
+    "agents",
     "references",
     "scripts",
     "evals",
@@ -54,6 +60,10 @@
     "advantage_evidence_labels",
     "canonical_creator_authority",
     "generalization_gate",
+    "progressive_architecture_gate",
+    "activation_over_storage",
+    "principle_plus_check",
+    "new_task_route_rematch",
     "action_boundary",
     "root_entrypoint_isolation",
     "validate_skill",
@@ -70,7 +80,8 @@
     "evidence_bound_public_claims",
     "self_contained_skill_publisher",
     "mit_license_preparation",
-    "bundled_qiaomu_profile_injection",
+    "owner_scoped_profile_injection",
+    "openai_codex_adapter",
     "repository_skill_name_separation",
     "feature_branch_only_publication",
     "pull_request_review_and_check_gate",
