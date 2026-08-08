@@ -354,7 +354,10 @@ def check_readme(root: Path, upstream: str, *, require_profile: bool) -> list[st
     failures = [f"README placeholder found: {pattern}" for pattern in PLACEHOLDERS if re.search(pattern, text, re.I)]
     requirements = {
         "install command": "npx skills add" in text,
-        "natural-language examples": "你可以直接这样说" in text or "Natural-language examples" in text,
+        "natural-language examples": any(
+            heading in text
+            for heading in ("你可以直接這樣說", "你可以直接这样说", "Natural-language examples")
+        ),
         "verification command": "validate_skill.py" in text,
         "prerequisite checklist": "- [ ]" in text,
         "troubleshooting": "Troubleshooting" in text,

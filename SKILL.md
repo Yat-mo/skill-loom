@@ -4,7 +4,7 @@ description: |
   Research, create, improve, migrate, evaluate, package, install-check, govern, and safely publish reusable agent skills from project rules, workflows, prompts, transcripts, docs, SOPs, runbooks, scripts, or notes. Use Skill Loom for new or existing skills, project skill architecture, progressive disclosure, routing and trigger boundaries, prior-art synthesis, trigger or output evals, Skill IR, release gates, GitHub repository and pull-request publication, versioned Releases, clean npx installation, team reuse, and create-and-publish flows. Formerly qiaomu-meta-skill; activate for legacy requests using that name. The publication path is self-contained and forbids direct default-branch pushes. Exclude one-off summaries, translations, ordinary docs, non-skill package publishing, and tasks that explicitly should not become a skill.
 metadata:
   author: Yat-mo
-  version: "3.0.0"
+  version: "3.0.1"
   upstream_inspiration: joeseesun/qiaomu-meta-skill; yaojingang/yao-meta-skill; joeseesun/qiaomu-skill-publisher; WoJiSama/skill-based-architecture
 ---
 

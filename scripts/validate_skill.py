@@ -202,7 +202,9 @@ def validate(root: Path) -> dict[str, Any]:
         readme_text = read_text(readme)
         readme_checks = {
             "install command": "npx skills add" in readme_text,
-            "natural examples": "你可以直接这样说" in readme_text,
+            "natural examples": any(
+                heading in readme_text for heading in ("你可以直接這樣說", "你可以直接这样说")
+            ),
             "verification commands": "validate_skill.py" in readme_text,
             "troubleshooting": "Troubleshooting" in readme_text,
         }
